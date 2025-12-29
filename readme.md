@@ -8,11 +8,13 @@ This tool helps you create a translation glossary spreadsheet for Korean novels,
 
 # Requirements
 
-1. **Python**: This is a programming language that makes the tool work. You'll need to install it from the official website (https://www.python.org/downloads/). Make sure to check the 2 boxes that say "Add Python to PATH" and "pip" during installation. This step lets your computer easily find and run the program.
+1. **Download** all the files in this repository into a folder on your pc.
 
-2. **Google API Key**: This is a special password that connects the program to Google's text-reading service. You can get a free one from the Google Cloud Console (https://console.cloud.google.com/). Here are the instructions on how to do it: https://www.youtube.com/watch?v=brCkpzAD0gc
+2. **Python**: This is a programming language that makes the tool work. You'll need to install it from the official website (https://www.python.org/downloads/). Make sure to check the 2 boxes that say "Add Python to PATH" and "pip" during installation. This step lets your computer easily find and run the program.
 
-3. **Run "setup.py"** by double-clicking it before you proceed to ensure everything is properly set up. You only ever need to run it ONCE. You should see the message "SETUP SUCCESSFUL!" in the command prompt window that pops up.
+3. **Google API Key**: This is a special password that connects the program to Google's text-reading service. You can get a free one from the Google Cloud Console (https://console.cloud.google.com/). Here are the instructions on how to do it: https://www.youtube.com/watch?v=brCkpzAD0gc
+
+4. **Run "setup.py"** by double-clicking it before you proceed to ensure everything is properly set up. You only ever need to run it ONCE. You should see the message "SETUP SUCCESSFUL!" in the command prompt window that pops up.
 
 	
 
@@ -29,5 +31,6 @@ This tool helps you create a translation glossary spreadsheet for Korean novels,
 	
 
 # Frequently Asked Questions
+
 
 1. If pip is missing: Uninstall and reinstall python, remember to check the boxes for "pip" and "Add Python to PATH"
