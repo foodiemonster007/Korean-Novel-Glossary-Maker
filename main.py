@@ -162,28 +162,18 @@ def run_noun_extraction_pipeline():
     master_nouns = categorization.categorize_nouns_with_ai(client, master_nouns)
     file_operations.save_nouns_json(master_nouns)
     
-    # STEP 4: Add empty english keys
-    print("\n--- STEP 4: Adding English keys ---")
-    added_count = 0
-    for noun in master_nouns:
-        if 'english' not in noun:
-            noun['english'] = ''
-            added_count += 1
-    print(f"  Added English keys to {added_count} nouns that didn't have them")
-    file_operations.save_nouns_json(master_nouns)
-    
-    # STEP 5: Fill English translations
+    # STEP 4: Fill English translations
     print("\n--- STEP 5: Translating to English ---")
     master_nouns = translation.translate_nouns_with_ai(client, master_nouns)
     file_operations.save_nouns_json(master_nouns)
     
-    # STEP 6: Guess missing hanja if GUESS_HANJA is True
+    # STEP 5: Guess missing hanja if GUESS_HANJA is True
     if config_loader.GUESS_HANJA:
         print("\n--- STEP 6: Guessing missing Hanja ---")
         master_nouns = hanja_guessing.guess_missing_hanja_with_ai(client, master_nouns)
         file_operations.save_nouns_json(master_nouns)
     
-    # STEP 7: Convert to simplified Chinese if SIMPLIFIED_CHINESE_CONVERSION is True
+    # STEP 6: Convert to simplified Chinese if SIMPLIFIED_CHINESE_CONVERSION is True
     if config_loader.SIMPLIFIED_CHINESE_CONVERSION:
         print("\n--- STEP 7: Converting to Simplified Chinese ---")
         for noun in master_nouns:
@@ -193,7 +183,7 @@ def run_noun_extraction_pipeline():
                 noun['chinese'] = ''
         file_operations.save_nouns_json(master_nouns)
     
-    # STEP 8: Convert to Excel
+    # STEP 7: Convert to Excel
     print("\n--- STEP 8: Creating Excel file ---")
     
     # Prepare data for Excel
@@ -244,6 +234,4 @@ if __name__ == "__main__":
         print("=" * 60)
     
     notification.send_notification("Pipeline Complete!", 
-
                                  "Noun extraction pipeline has finished.")
-
