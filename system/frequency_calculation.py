@@ -5,7 +5,6 @@
 Calculates noun frequencies and performs sorting operations
 """
 import re
-import json
 
 def calculate_frequencies(noun_list, combined_text):
     """Calculate frequencies across all text content, adding to existing frequencies."""
@@ -49,3 +48,4 @@ def sort_nouns(noun_list):
     
     print(f"  Sorted {len(sorted_nouns)} nouns")
     return sorted_nouns
+
