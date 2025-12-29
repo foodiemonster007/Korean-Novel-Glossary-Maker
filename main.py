@@ -27,7 +27,7 @@ def run_noun_extraction_pipeline():
         notification.send_notification("API Key Missing", "Please set your Google AI API key.")
         return False
 
-    # STEP 0: Load existing nouns.json (if exists) and merge with reference nouns
+    # STEP 0: Load existing nouns.json (if exists) and optionally merge with reference nouns
     print("\n--- STEP 0: Loading and merging nouns ---")
     
     # Try to load existing nouns.json
@@ -45,34 +45,39 @@ def run_noun_extraction_pipeline():
         master_nouns = []
         existing_hanguls = set()
     
-    # Load reference nouns
+    # Load reference nouns (optional)
     reference_nouns = file_operations.load_reference_nouns()
-    print(f"  Loaded {len(reference_nouns)} nouns from reference file")
     
-    # Add reference nouns that aren't already in master_nouns
-    new_noun_count = 0
-    for noun in reference_nouns:
-        hangul = noun['hangul']
+    if reference_nouns and len(reference_nouns) > 0:
+        print(f"  Loaded {len(reference_nouns)} nouns from reference file")
         
-        if hangul not in existing_hanguls:
-            # Ensure all required fields exist
-            if 'frequency' not in noun:
-                noun['frequency'] = 0
-            if 'hanja' not in noun:
-                noun['hanja'] = ''
-            if 'english' not in noun:
-                noun['english'] = ''
-            if 'category' not in noun:
-                noun['category'] = ''
+        # Add reference nouns that aren't already in master_nouns
+        new_noun_count = 0
+        for noun in reference_nouns:
+            hangul = noun['hangul']
             
-            master_nouns.append(noun)
-            existing_hanguls.add(hangul)
-            new_noun_count += 1
+            if hangul not in existing_hanguls:
+                # Ensure all required fields exist
+                if 'frequency' not in noun:
+                    noun['frequency'] = 0
+                if 'hanja' not in noun:
+                    noun['hanja'] = ''
+                if 'english' not in noun:
+                    noun['english'] = ''
+                if 'category' not in noun:
+                    noun['category'] = ''
+                
+                master_nouns.append(noun)
+                existing_hanguls.add(hangul)
+                new_noun_count += 1
+        
+        print(f"  Added {new_noun_count} new nouns from reference file")
+    else:
+        print("  No reference nouns found or reference file is empty")
     
-    # Save merged nouns
+    # Save merged nouns (even if no reference nouns were added)
     file_operations.save_nouns_json(master_nouns)
     print(f"  Total: {len(master_nouns)} nouns in master list")
-    print(f"  Added {new_noun_count} new nouns from reference file")
     
     # Get text files
     text_files = file_operations.get_text_files_from_folder(config_loader.RAWS_FOLDER)
@@ -241,3 +246,4 @@ if __name__ == "__main__":
     notification.send_notification("Pipeline Complete!", 
 
                                  "Noun extraction pipeline has finished.")
+
