@@ -5,19 +5,27 @@
 Calculates noun frequencies and performs sorting operations
 """
 import re
+import json
 
 def calculate_frequencies(noun_list, combined_text):
-    """Calculate frequencies across all text content."""
+    """Calculate frequencies across all text content, adding to existing frequencies."""
     print("\n--- Performing frequency count across all files ---")
     
+    # Clean up the text
     combined_text = re.sub(r'\s+', ' ', combined_text)
     print(f"  Total text length: {len(combined_text):,} characters")
     
+    # Count frequencies for each noun
     for noun in noun_list:
         hangul = noun['hangul']
         pattern = re.escape(hangul)
         count = len(re.findall(pattern, combined_text))
-        noun['frequency'] = count
+        
+        # Add to existing frequency if present, otherwise set to new count
+        if 'frequency' in noun:
+            noun['frequency'] += count
+        else:
+            noun['frequency'] = count
     
     print("  Frequency count complete.")
     return noun_list
