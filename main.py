@@ -163,19 +163,19 @@ def run_noun_extraction_pipeline():
     file_operations.save_nouns_json(master_nouns)
     
     # STEP 4: Fill English translations
-    print("\n--- STEP 5: Translating to English ---")
+    print("\n--- STEP 4: Translating to English ---")
     master_nouns = translation.translate_nouns_with_ai(client, master_nouns)
     file_operations.save_nouns_json(master_nouns)
     
     # STEP 5: Guess missing hanja if GUESS_HANJA is True
     if config_loader.GUESS_HANJA:
-        print("\n--- STEP 6: Guessing missing Hanja ---")
+        print("\n--- STEP 5: Guessing missing Hanja ---")
         master_nouns = hanja_guessing.guess_missing_hanja_with_ai(client, master_nouns)
         file_operations.save_nouns_json(master_nouns)
     
     # STEP 6: Convert to simplified Chinese if SIMPLIFIED_CHINESE_CONVERSION is True
     if config_loader.SIMPLIFIED_CHINESE_CONVERSION:
-        print("\n--- STEP 7: Converting to Simplified Chinese ---")
+        print("\n--- STEP 6: Converting to Simplified Chinese ---")
         for noun in master_nouns:
             if noun['hanja']:
                 noun['chinese'] = convert_hanja_to_simplified(noun['hanja'])
@@ -184,7 +184,7 @@ def run_noun_extraction_pipeline():
         file_operations.save_nouns_json(master_nouns)
     
     # STEP 7: Convert to Excel
-    print("\n--- STEP 8: Creating Excel file ---")
+    print("\n--- STEP 7: Creating Excel file ---")
     
     # Prepare data for Excel
     excel_data = []
