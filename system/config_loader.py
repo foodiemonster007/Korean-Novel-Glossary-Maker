@@ -19,7 +19,7 @@ else:
     config = {}
 
 # Extract configuration values
-API_KEY = config.get("API_KEY", "AIzaSyATItwVXB4wgXOLhxJsKbYHTbAGVk_fZwc")
+API_KEY = config.get("API_KEY", "")
 MODEL_NAME = config.get("MODEL_NAME", "gemini-2.5-pro")
 RAWS_FOLDER = config.get("RAWS_FOLDER", "raws")
 NOUNS_JSON_FILE = config.get("NOUNS_JSON_FILE", "nouns.json")
@@ -59,5 +59,6 @@ if GENRE not in GENRE_DESCRIPTIONS:
     GENRE = "murim"
 
 GENRE_DESCRIPTION = GENRE_DESCRIPTIONS[GENRE]
+
 
 print(f"Configuration loaded from {CONFIG_FILE}")
