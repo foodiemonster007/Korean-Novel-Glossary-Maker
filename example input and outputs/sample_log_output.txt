@@ -1,0 +1,101 @@
+Configuration saved to config.json
+============================================================
+STARTING NOUN EXTRACTION PIPELINE
+Genre: murim (Korean martial arts novels)
+============================================================
+
+--- STEP 0: Loading reference file ---
+Loaded 561 reference nouns from 'murim_reference.xlsx'
+Saved 561 nouns to nouns.json
+Initialized with 561 nouns from reference file
+Found 10 text files in 'raws'.
+Grouped files into 2 chunks of up to 5 files each.
+
+--- Processing chunk 1/2 ---
+  Files: ['001.txt', '002.txt', '003.txt', '004.txt', '005.txt']
+  Regex found 16 hanja nouns.
+  Attempt 1/10 for AI discovery...
+  AI discovered 23 new nouns.
+Saved 599 nouns to nouns.json
+
+--- Processing chunk 2/2 ---
+  Files: ['006.txt', '007.txt', '008.txt', '009.txt', '010.txt']
+  Regex found 24 hanja nouns.
+  Attempt 1/10 for AI discovery...
+  AI discovered 13 new nouns.
+Saved 634 nouns to nouns.json
+
+--- STEP 2: Calculating frequencies and filtering ---
+
+--- Performing frequency count across all files ---
+  Total text length: 62,221 characters
+  Frequency count complete.
+  Removed 499 nouns with frequency 0
+
+--- Sorting nouns by length and frequency ---
+  Sorted 135 nouns
+Saved 135 nouns to nouns.json
+
+--- STEP 3: Categorizing nouns ---
+
+--- Starting AI categorization for 135 nouns ---
+  Processing 73 nouns that need categorization
+  Processing batch 1/4 (20 nouns)
+  Processing batch 2/4 (20 nouns)
+  Processing batch 3/4 (20 nouns)
+  Processing batch 4/4 (13 nouns)
+--- AI categorization complete ---
+Saved 135 nouns to nouns.json
+
+--- STEP 4: Adding English keys ---
+  Added English keys to 0 nouns that didn't have them
+Saved 135 nouns to nouns.json
+
+--- STEP 5: Translating to English ---
+
+--- Starting AI translation for 73 nouns (skipping 62 already translated) ---
+  Processing batch 1/5 (15 nouns)
+  Processing batch 2/5 (15 nouns)
+  Processing batch 3/5 (15 nouns)
+  Processing batch 4/5 (15 nouns)
+  Processing batch 5/5 (13 nouns)
+--- AI translation complete ---
+Saved 135 nouns to nouns.json
+
+--- STEP 6: Guessing missing Hanja ---
+
+--- Starting AI hanja guessing for 29 nouns (skipping 106 already have hanja) ---
+  Processing batch 1/2 (15 nouns)
+  Processing batch 2/2 (14 nouns)
+--- AI hanja guessing complete ---
+Saved 135 nouns to nouns.json
+
+--- STEP 7: Converting to Simplified Chinese ---
+Saved 135 nouns to nouns.json
+
+--- STEP 8: Creating Excel file ---
+
+Saving categorized data to a multi-sheet Excel file: 'nouns.xlsx'
+  - Wrote 16 rows to sheet 'character names'.
+  - Wrote 12 rows to sheet 'skills and techniques'.
+  - Wrote 20 rows to sheet 'character titles'.
+  - Wrote 17 rows to sheet 'locations and organizations'.
+  - Wrote 4 rows to sheet 'item names'.
+  - Wrote 66 rows to sheet 'misc'.
+
+✅ Successfully created sorted, categorized file: 'nouns.xlsx'
+✅ Created master file: 'nouns_master.xlsx'
+
+📊 Final Statistics:
+   Total nouns: 135
+   - character names: 16
+   - skills and techniques: 12
+   - character titles: 20
+   - locations and organizations: 17
+   - item names: 4
+   - misc: 66
+
+============================================================
+PIPELINE COMPLETED SUCCESSFULLY!
+============================================================
+

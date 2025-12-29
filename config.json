@@ -1,0 +1,35 @@
+{
+  "API_KEY": "",
+  "MODEL_NAME": "gemini-2.5-flash",
+  "RAWS_FOLDER": "raws",
+  "REFERENCE_FILE": "murim_reference.xlsx",
+  "OUTPUT_EXCEL": "nouns.xlsx",
+  "CHAPTERS_ANALYZED": 5,
+  "CATEGORIZATION_BATCH_SIZE": 20,
+  "TRANSLATION_BATCH_SIZE": 15,
+  "HANJA_GUESSING_BATCH_SIZE": 15,
+  "MAX_RETRIES": 10,
+  "RETRY_DELAY": 30,
+  "HANJA_IDENTIFICATION": true,
+  "GUESS_HANJA": true,
+  "SIMPLIFIED_CHINESE_CONVERSION": true,
+  "GENRE": "murim",
+  "NOUNS_JSON_FILE": "nouns.json",
+  "ERROR_LOG": "error.txt",
+  "GENRE_DESCRIPTIONS": {
+    "murim": "Korean martial arts novels",
+    "rofan": "Korean romance fantasy novels",
+    "modern": "Korean modern day novels",
+    "game": "Korean novels about video games",
+    "westfan": "Korean western fantasy novels",
+    "dungeon": "Korean modern day fantasy novels"
+  },
+  "CATEGORIES": [
+    "character names",
+    "skills and techniques",
+    "character titles",
+    "locations and organizations",
+    "item names",
+    "misc"
+  ]
+}
