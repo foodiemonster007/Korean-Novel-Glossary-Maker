@@ -16,6 +16,8 @@ This tool helps you create a translation glossary spreadsheet for Korean novels,
 
 4. **Run "setup.py"** by double-clicking it before you proceed to ensure everything is properly set up. You only ever need to run it ONCE. You should see the message "SETUP SUCCESSFUL!" in the command prompt window that pops up.
 
+5.  **(optional) Local Trained Model**: You will need to download a 3 GB file to use the local model (and save AI credits). The download link is: https://mega.nz/file/MvgFGDJJ#YdQxyWAHsBxNGZoraBn336QG5c46gNE18WglfHuzrnc
+
 	
 
 # Instructions
