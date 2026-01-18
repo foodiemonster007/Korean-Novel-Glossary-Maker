@@ -1,0 +1,546 @@
+[
+  {
+    "hangul": "만마의 주인",
+    "hanja": "",
+    "english": "Lord of Ten Thousand Devils",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마신교",
+    "hanja": "天魔神教",
+    "english": "the Heavenly Demon Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대한민국",
+    "hanja": "大韩民国",
+    "english": "the Republic of Korea",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "구배지례",
+    "hanja": "九拜之礼",
+    "english": "the Nine Bows",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "존성대명",
+    "hanja": "尊姓大名",
+    "english": "Your Honorable Name",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일월신교",
+    "hanja": "日月神教",
+    "english": "the Sun Moon Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혁련일휘",
+    "hanja": "赫連日輝",
+    "english": "Glorious Sun Radiance",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "주무관님",
+    "hanja": "",
+    "english": "Officer in Charge",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "청풍객잔",
+    "hanja": "",
+    "english": "Clear Wind Inn",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림맹",
+    "hanja": "武林盟",
+    "english": "the Murim Alliance",
+    "category": "locations and organizations",
+    "frequency": 12,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사이비",
+    "hanja": "似而非",
+    "english": "Pseudo",
+    "category": "misc",
+    "frequency": 12,
+    "ambiguous": false
+  },
+  {
+    "hangul": "점소이",
+    "hanja": "店小二",
+    "english": "waiter",
+    "category": "character titles",
+    "frequency": 11,
+    "ambiguous": false
+  },
+  {
+    "hangul": "어르신",
+    "hanja": "老爷",
+    "english": "Elder",
+    "category": "character titles",
+    "frequency": 8,
+    "ambiguous": false
+  },
+  {
+    "hangul": "워라밸",
+    "hanja": "",
+    "english": "Work-Life Balance",
+    "category": "misc",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마의",
+    "hanja": "天魔",
+    "english": "the Heavenly Demon",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림인",
+    "hanja": "武林人",
+    "english": "martial artist",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "주무관",
+    "hanja": "",
+    "english": "Officer in Charge",
+    "category": "misc",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이지연",
+    "hanja": "",
+    "english": "Wise Lotus",
+    "category": "misc",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서지훈",
+    "hanja": "",
+    "english": "Meritorious Will",
+    "category": "misc",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자님",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "misc",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마도관",
+    "hanja": "",
+    "english": "Demonic Path Hall",
+    "category": "misc",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "계수배",
+    "hanja": "稽首拜",
+    "english": "Prostrate Bow",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "진하연",
+    "hanja": "陳赮蓮",
+    "english": "Rosy Cloud Lotus",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "누칼협",
+    "hanja": "",
+    "english": "No Coercion",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "김창석",
+    "hanja": "",
+    "english": "Prosperous Grant",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자들",
+    "hanja": "弟子们",
+    "english": "disciples",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "풍암전",
+    "hanja": "風岩殿",
+    "english": "Wind Rock Palace",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서기보",
+    "hanja": "",
+    "english": "Assistant Scribe",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "성화교",
+    "hanja": "",
+    "english": "Sacred Flame Sect",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마",
+    "hanja": "天魔",
+    "english": "the Heavenly Demon",
+    "category": "character titles",
+    "frequency": 29,
+    "ambiguous": false
+  },
+  {
+    "hangul": "객잔",
+    "hanja": "客栈",
+    "english": "inn",
+    "category": "locations and organizations",
+    "frequency": 23,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자",
+    "hanja": "弟子",
+    "english": "disciple",
+    "category": "character titles",
+    "frequency": 21,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림",
+    "hanja": "武林",
+    "english": "murim",
+    "category": "misc",
+    "frequency": 19,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주",
+    "hanja": "教主",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 15,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목",
+    "hanja": "一木",
+    "english": "One Tree",
+    "category": "misc",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무공",
+    "hanja": "武功",
+    "english": "martial arts",
+    "category": "misc",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무관",
+    "hanja": "武馆",
+    "english": "martial arts academy",
+    "category": "locations and organizations",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "별호",
+    "hanja": "别号",
+    "english": "alias",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "신교",
+    "hanja": "神教",
+    "english": "the Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "태현",
+    "hanja": "太賢",
+    "english": "Grand Sage",
+    "category": "misc",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "장원",
+    "hanja": "壯元",
+    "english": "Chief Scholar",
+    "category": "misc",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마교",
+    "hanja": "魔教",
+    "english": "the Demonic Cult",
+    "category": "locations and organizations",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자",
+    "hanja": "公子",
+    "english": "Young Lord",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "장사",
+    "hanja": "长沙",
+    "english": "Changsha",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "내기",
+    "hanja": "内气",
+    "english": "inner qi",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "중원",
+    "hanja": "中原",
+    "english": "Central Plains",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정파",
+    "hanja": "正派",
+    "english": "orthodox sects",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "첫째",
+    "hanja": "老大",
+    "english": "big brother",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "명교",
+    "hanja": "明教",
+    "english": "the Ming Cult",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마인",
+    "hanja": "魔人",
+    "english": "demonic practitioner",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "방장",
+    "hanja": "方丈",
+    "english": "Abbot",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "호위",
+    "hanja": "护卫",
+    "english": "bodyguard",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무인",
+    "hanja": "武人",
+    "english": "martial artist",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "살기",
+    "hanja": "杀气",
+    "english": "killing intent",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "경공",
+    "hanja": "轻功",
+    "english": "movement arts",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "뇌옥",
+    "hanja": "牢狱",
+    "english": "prison",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서기",
+    "hanja": "书记",
+    "english": "secretary",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "둘째",
+    "hanja": "老二",
+    "english": "second brother",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천양",
+    "hanja": "千陽",
+    "english": "Thousand Suns",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "인의",
+    "hanja": "仁义",
+    "english": "righteousness",
+    "category": "misc",
+    "frequency": 16,
+    "ambiguous": true
+  },
+  {
+    "hangul": "정도",
+    "hanja": "正道",
+    "english": "orthodox creed",
+    "category": "skills and techniques",
+    "frequency": 10,
+    "ambiguous": true
+  },
+  {
+    "hangul": "빙의",
+    "hanja": "夺舍",
+    "english": "spirit possession",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마의",
+    "hanja": "魔医",
+    "english": "the Demonic Physician",
+    "category": "character titles",
+    "frequency": 8,
+    "ambiguous": true
+  },
+  {
+    "hangul": "신의",
+    "hanja": "神医",
+    "english": "the Divine Physician",
+    "category": "character titles",
+    "frequency": 7,
+    "ambiguous": true
+  },
+  {
+    "hangul": "기도",
+    "hanja": "气道",
+    "english": "aura",
+    "category": "skills and techniques",
+    "frequency": 7,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마도",
+    "hanja": "魔道",
+    "english": "demonic creed",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": true
+  },
+  {
+    "hangul": "욜로",
+    "hanja": "",
+    "english": "You Only Live Once",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "보도",
+    "hanja": "宝刀",
+    "english": "treasured blade",
+    "category": "item names",
+    "frequency": 1,
+    "ambiguous": true
+  }
+]

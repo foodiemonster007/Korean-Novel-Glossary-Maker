@@ -1,0 +1,21 @@
+{
+    "paths": {
+        "model_path": "ner_model",
+        "output_directory": "ner_output",
+        "log_directory": "logs"
+    },
+    "processing": {
+        "use_gpu": true,
+        "chunk_size": 512,
+        "batch_size": 32,
+        "remove_blank_lines": true,
+        "encoding": "utf-8",
+        "checkpoint_interval": 10
+    },
+    "output": {
+        "include_original_text": true,
+        "include_context": true,
+        "group_by_chapter": false,
+        "confidence_threshold": 0.7
+    }
+}

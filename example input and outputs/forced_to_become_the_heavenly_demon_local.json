@@ -1,0 +1,2386 @@
+[
+  {
+    "hangul": "일목 공자님",
+    "hanja": "",
+    "english": "Ilmok Gongjanim",
+    "category": "character names",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "막내 제자가",
+    "hanja": "",
+    "english": "Youngest Disciple",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목 공자를",
+    "hanja": "",
+    "english": "Ilmok Gongja",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "폭렬마라검법",
+    "hanja": "爆裂魔羅劍法",
+    "english": "Explosive Mara Sword Art",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "풍마수라도법",
+    "hanja": "風魔修羅刀法",
+    "english": "Wind Demon Asura Blade Art",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승님께서",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 59,
+    "ambiguous": false
+  },
+  {
+    "hangul": "탈혼무정검",
+    "hanja": "奪魂無情劍",
+    "english": "Soul-Snatching Heartless Sword",
+    "category": "skills and techniques",
+    "frequency": 17,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혈영십팔검",
+    "hanja": "血影十八劍",
+    "english": "Eighteen Blood Shadow Swords",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일타강사의",
+    "hanja": "",
+    "english": "Star Instructor",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "고해성사를",
+    "hanja": "",
+    "english": "Confession",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "선지자님들",
+    "hanja": "",
+    "english": "Prophets",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "진 소저가",
+    "hanja": "",
+    "english": "Jin Sojeo",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사이비들에",
+    "hanja": "",
+    "english": "Cultists",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승님께",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 94,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승님의",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 53,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마신교",
+    "hanja": "天魔神教",
+    "english": "the Heavenly Demon Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 23,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혼무정검",
+    "hanja": "",
+    "english": "Soul Heartless Sword",
+    "category": "skills and techniques",
+    "frequency": 21,
+    "ambiguous": false
+  },
+  {
+    "hangul": "부작용이",
+    "hanja": "",
+    "english": "Side Effect",
+    "category": "skills and techniques",
+    "frequency": 19,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마께서",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마신공",
+    "hanja": "天魔神功",
+    "english": "the Heavenly Demon Divine Art",
+    "category": "skills and techniques",
+    "frequency": 12,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자께서",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "character titles",
+    "frequency": 12,
+    "ambiguous": false
+  },
+  {
+    "hangul": "추궁과혈",
+    "hanja": "推宫过穴",
+    "english": "Body Purification",
+    "category": "skills and techniques",
+    "frequency": 8,
+    "ambiguous": false
+  },
+  {
+    "hangul": "소수마공",
+    "hanja": "素手魔功",
+    "english": "White Hand Demonic Art",
+    "category": "skills and techniques",
+    "frequency": 8,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마비록",
+    "hanja": "天魔祕錄",
+    "english": "Secret Record of the Heavenly Demon",
+    "category": "item names",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "어르신의",
+    "hanja": "",
+    "english": "Elder",
+    "category": "character titles",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "운기조식",
+    "hanja": "",
+    "english": "Qi Meditation",
+    "category": "skills and techniques",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대성한다",
+    "hanja": "",
+    "english": "Great Completion",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마님의",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "주화입마",
+    "hanja": "走火入魔",
+    "english": "qi deviation",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사이비가",
+    "hanja": "",
+    "english": "Cultist",
+    "category": "character titles",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "탈혼비검",
+    "hanja": "脫魂備劍",
+    "english": "Soul-Extracting Prepared Sword",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림맹이",
+    "hanja": "",
+    "english": "Murim Alliance",
+    "category": "locations and organizations",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "중원에서",
+    "hanja": "",
+    "english": "Central Plains",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형제들",
+    "hanja": "",
+    "english": "Fellow Disciples",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대한민국",
+    "hanja": "大韩民国",
+    "english": "the Republic of Korea",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "구배지례",
+    "hanja": "九拜之礼",
+    "english": "the Nine Bows",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "반 시진",
+    "hanja": "半个时辰",
+    "english": "one hour",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "존성대명",
+    "hanja": "尊姓大名",
+    "english": "Honorable Name",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목으로",
+    "hanja": "",
+    "english": "Ilmok",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주님께",
+    "hanja": "",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자님께",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교인들의",
+    "hanja": "",
+    "english": "Cultists",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "황실에서",
+    "hanja": "",
+    "english": "Imperial Court",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대성해야",
+    "hanja": "",
+    "english": "Great Completion",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대성하고",
+    "hanja": "",
+    "english": "Great Completion",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서지훈의",
+    "hanja": "",
+    "english": "Seo Jihun",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승으로",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형들이",
+    "hanja": "",
+    "english": "Senior Disciples",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이공자께",
+    "hanja": "",
+    "english": "Second Young Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "오공자께",
+    "hanja": "",
+    "english": "Fifth Young Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "칠공자께",
+    "hanja": "",
+    "english": "Seventh Young Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일월신교",
+    "hanja": "日月神教",
+    "english": "the Sun Moon Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혁련일휘",
+    "hanja": "赫連日輝",
+    "english": "Hyeokryeon Ilhwi",
+    "category": "character names",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혹세무민",
+    "hanja": "惑世誣民",
+    "english": "Deceiving the World",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "광혼검법",
+    "hanja": "狂魂劍法",
+    "english": "Crazed Soul Sword Art",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "뇌황마권",
+    "hanja": "雷黃魔拳",
+    "english": "Thunder Yellow Demonic Fist",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "낭중지추",
+    "hanja": "囊中之錐",
+    "english": "Awl in a Bag",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승님",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 192,
+    "ambiguous": false
+  },
+  {
+    "hangul": "부작용",
+    "hanja": "",
+    "english": "Side Effect",
+    "category": "skills and techniques",
+    "frequency": 67,
+    "ambiguous": false
+  },
+  {
+    "hangul": "진하연",
+    "hanja": "陳赮蓮",
+    "english": "Jin Hayeon",
+    "category": "character names",
+    "frequency": 54,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사이비",
+    "hanja": "似而非",
+    "english": "Sa Ibi",
+    "category": "character names",
+    "frequency": 38,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무공을",
+    "hanja": "",
+    "english": "Martial Arts",
+    "category": "skills and techniques",
+    "frequency": 37,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자님",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "character titles",
+    "frequency": 34,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마도관",
+    "hanja": "",
+    "english": "Demonic Hall",
+    "category": "locations and organizations",
+    "frequency": 31,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마께",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 27,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자가",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 24,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마공의",
+    "hanja": "",
+    "english": "Demonic Arts",
+    "category": "skills and techniques",
+    "frequency": 22,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주의",
+    "hanja": "",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 19,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자께",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "character titles",
+    "frequency": 19,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무공이",
+    "hanja": "",
+    "english": "Martial Arts",
+    "category": "skills and techniques",
+    "frequency": 18,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목이",
+    "hanja": "",
+    "english": "Il Mok",
+    "category": "character names",
+    "frequency": 18,
+    "ambiguous": false
+  },
+  {
+    "hangul": "탈혼무",
+    "hanja": "",
+    "english": "Soul-Snatching Dance",
+    "category": "skills and techniques",
+    "frequency": 18,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마님",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 16,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림맹",
+    "hanja": "武林盟",
+    "english": "the Murim Alliance",
+    "category": "locations and organizations",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마의",
+    "hanja": "天魔",
+    "english": "the Heavenly Demon",
+    "category": "character titles",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "점소이",
+    "hanja": "店小二",
+    "english": "waiter",
+    "category": "character titles",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서지훈",
+    "hanja": "",
+    "english": "Seo Jihun",
+    "category": "character names",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목의",
+    "hanja": "",
+    "english": "Il Mok",
+    "category": "character names",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무공에",
+    "hanja": "",
+    "english": "Martial Arts",
+    "category": "skills and techniques",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "주무관",
+    "hanja": "",
+    "english": "Administrator",
+    "category": "character titles",
+    "frequency": 12,
+    "ambiguous": false
+  },
+  {
+    "hangul": "내공을",
+    "hanja": "",
+    "english": "Internal Energy",
+    "category": "skills and techniques",
+    "frequency": 11,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형들",
+    "hanja": "",
+    "english": "Senior Martial Brothers",
+    "category": "character titles",
+    "frequency": 11,
+    "ambiguous": false
+  },
+  {
+    "hangul": "광신도",
+    "hanja": "",
+    "english": "Zealot",
+    "category": "character titles",
+    "frequency": 11,
+    "ambiguous": false
+  },
+  {
+    "hangul": "어르신",
+    "hanja": "老爷",
+    "english": "Elder",
+    "category": "character titles",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마에",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자를",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "불신자",
+    "hanja": "",
+    "english": "Infidel",
+    "category": "character titles",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마가",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림인",
+    "hanja": "武林人",
+    "english": "martial artist",
+    "category": "character titles",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주가",
+    "hanja": "",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "오성이",
+    "hanja": "",
+    "english": "Comprehension",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혈영십",
+    "hanja": "",
+    "english": "Ten Blood Shadows",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자이",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정도의",
+    "hanja": "",
+    "english": "Righteous Path",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "추궁과",
+    "hanja": "",
+    "english": "Pursuit",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자로",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "혼비검",
+    "hanja": "",
+    "english": "Soul-Flying Sword",
+    "category": "skills and techniques",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무공의",
+    "hanja": "",
+    "english": "Martial Arts",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마를",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정파의",
+    "hanja": "",
+    "english": "Orthodox Faction",
+    "category": "locations and organizations",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대성한",
+    "hanja": "",
+    "english": "Mastery",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "단전에",
+    "hanja": "",
+    "english": "Dantian",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정도로",
+    "hanja": "",
+    "english": "Righteous Path",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "화입마",
+    "hanja": "",
+    "english": "Cultivation Deviation",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "동자공",
+    "hanja": "童子功",
+    "english": "Dong Jagong",
+    "category": "character names",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마와",
+    "hanja": "",
+    "english": "Heavenly Demon",
+    "category": "character titles",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자를",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "character titles",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자의",
+    "hanja": "",
+    "english": "Young Master",
+    "category": "character titles",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마보를",
+    "hanja": "",
+    "english": "Horse Stance",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "중원의",
+    "hanja": "",
+    "english": "Central Plains",
+    "category": "locations and organizations",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "내공이",
+    "hanja": "",
+    "english": "Internal Energy",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정도가",
+    "hanja": "",
+    "english": "Righteous Path",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "빙의인",
+    "hanja": "",
+    "english": "Possession",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "경공술",
+    "hanja": "",
+    "english": "Lightness Skill",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "기도를",
+    "hanja": "",
+    "english": "Prayer",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "기독교",
+    "hanja": "",
+    "english": "Christianity",
+    "category": "locations and organizations",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "동학의",
+    "hanja": "",
+    "english": "Dong Hak",
+    "category": "character names",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "초식을",
+    "hanja": "",
+    "english": "Martial Form",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승이",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "신교를",
+    "hanja": "",
+    "english": "Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "역도로",
+    "hanja": "",
+    "english": "Rebel",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자는",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주직",
+    "hanja": "",
+    "english": "Cult Leader Position",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자들",
+    "hanja": "弟子们",
+    "english": "disciples",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "풍암전",
+    "hanja": "風岩殿",
+    "english": "Pung Amjeon",
+    "category": "character names",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "장사를",
+    "hanja": "",
+    "english": "Changsha",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "고문을",
+    "hanja": "",
+    "english": "Advisor",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교관과",
+    "hanja": "",
+    "english": "Instructor",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "미륵에",
+    "hanja": "",
+    "english": "Mireuk",
+    "category": "character names",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교인들",
+    "hanja": "",
+    "english": "Cultists",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "황실에",
+    "hanja": "",
+    "english": "Imperial Court",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "조현병",
+    "hanja": "",
+    "english": "Jo Hyeonbyeong",
+    "category": "character names",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "초식인",
+    "hanja": "",
+    "english": "Martial Form",
+    "category": "skills and techniques",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목을",
+    "hanja": "",
+    "english": "Il Mok",
+    "category": "character names",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형제",
+    "hanja": "",
+    "english": "Fellow Disciples",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자분",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "계수배",
+    "hanja": "稽首拜",
+    "english": "Gye Subae",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "선지자",
+    "hanja": "先知者",
+    "english": "Seon Jija",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "위진학",
+    "hanja": "魏眞虐",
+    "english": "Wi Jinhak",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서기보",
+    "hanja": "",
+    "english": "Assistant Clerk",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사시미",
+    "hanja": "",
+    "english": "Sashimi Knife",
+    "category": "item names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "빙의에",
+    "hanja": "",
+    "english": "Possession",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정파가",
+    "hanja": "",
+    "english": "Orthodox Faction",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림의",
+    "hanja": "",
+    "english": "Martial World",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "뇌옥에",
+    "hanja": "",
+    "english": "Prison",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "성화교",
+    "hanja": "",
+    "english": "Sacred Fire Cult",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주들",
+    "hanja": "",
+    "english": "Cult Leaders",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "조사를",
+    "hanja": "",
+    "english": "Patriarch",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무인들",
+    "hanja": "",
+    "english": "Martial Artists",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "호위가",
+    "hanja": "",
+    "english": "Guard",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승에",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주는",
+    "hanja": "",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자에",
+    "hanja": "",
+    "english": "Disciple",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "외공을",
+    "hanja": "",
+    "english": "External Art",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주였",
+    "hanja": "",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "고문하",
+    "hanja": "",
+    "english": "Advisor",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "불교의",
+    "hanja": "",
+    "english": "Buddhism",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "예수께",
+    "hanja": "",
+    "english": "Jesu",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "한국사",
+    "hanja": "",
+    "english": "Han Guksa",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "역도들",
+    "hanja": "",
+    "english": "Rebels",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "동학을",
+    "hanja": "",
+    "english": "Dong Hak",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림이",
+    "hanja": "",
+    "english": "Martial World",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "빙공이",
+    "hanja": "",
+    "english": "Ice Art",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "양기를",
+    "hanja": "",
+    "english": "Yang Qi",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주에",
+    "hanja": "",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "화경이",
+    "hanja": "",
+    "english": "Transcendent Realm",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "강기를",
+    "hanja": "",
+    "english": "Astral Qi",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "초식에",
+    "hanja": "",
+    "english": "Stance",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "단전이",
+    "hanja": "",
+    "english": "Dantian",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "기해혈",
+    "hanja": "",
+    "english": "Sea of Qi Acupoint",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "한글이",
+    "hanja": "",
+    "english": "Han Geul",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승과",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사부가",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형분",
+    "hanja": "",
+    "english": "Senior Martial Brother",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "쟁탈전",
+    "hanja": "",
+    "english": "Struggle for Power",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형에",
+    "hanja": "",
+    "english": "Senior Martial Brother",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형이",
+    "hanja": "",
+    "english": "Senior Martial Brother",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형을",
+    "hanja": "",
+    "english": "Senior Martial Brother",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이공자",
+    "hanja": "二公子",
+    "english": "Second Young Master",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "인내천",
+    "hanja": "人乃天",
+    "english": "In Naecheon",
+    "category": "character names",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마령각",
+    "hanja": "魔靈脚",
+    "english": "Ma Ryeonggak",
+    "category": "character names",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서완평",
+    "hanja": "徐完平",
+    "english": "Seo Wanpyeong",
+    "category": "character names",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "종리추",
+    "hanja": "鍾離錐",
+    "english": "Jongni Chu",
+    "category": "character names",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천마",
+    "hanja": "天魔",
+    "english": "the Heavenly Demon",
+    "category": "character titles",
+    "frequency": 107,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무공",
+    "hanja": "武功",
+    "english": "martial arts",
+    "category": "skills and techniques",
+    "frequency": 72,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마공",
+    "hanja": "魔功",
+    "english": "demonic art",
+    "category": "skills and techniques",
+    "frequency": 53,
+    "ambiguous": false
+  },
+  {
+    "hangul": "제자",
+    "hanja": "弟子",
+    "english": "disciple",
+    "category": "character titles",
+    "frequency": 52,
+    "ambiguous": false
+  },
+  {
+    "hangul": "일목",
+    "hanja": "一木",
+    "english": "Il Mok",
+    "category": "character names",
+    "frequency": 44,
+    "ambiguous": false
+  },
+  {
+    "hangul": "공자",
+    "hanja": "公子",
+    "english": "Young Lord",
+    "category": "character titles",
+    "frequency": 43,
+    "ambiguous": false
+  },
+  {
+    "hangul": "신교",
+    "hanja": "神教",
+    "english": "the Divine Cult",
+    "category": "locations and organizations",
+    "frequency": 32,
+    "ambiguous": false
+  },
+  {
+    "hangul": "교주",
+    "hanja": "教主",
+    "english": "Cult Leader",
+    "category": "character titles",
+    "frequency": 26,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무림",
+    "hanja": "武林",
+    "english": "murim",
+    "category": "misc",
+    "frequency": 25,
+    "ambiguous": false
+  },
+  {
+    "hangul": "객잔",
+    "hanja": "客栈",
+    "english": "inn",
+    "category": "locations and organizations",
+    "frequency": 24,
+    "ambiguous": false
+  },
+  {
+    "hangul": "내공",
+    "hanja": "内功",
+    "english": "inner arts",
+    "category": "skills and techniques",
+    "frequency": 14,
+    "ambiguous": false
+  },
+  {
+    "hangul": "외공",
+    "hanja": "外功",
+    "english": "external arts",
+    "category": "skills and techniques",
+    "frequency": 14,
+    "ambiguous": false
+  },
+  {
+    "hangul": "탈마",
+    "hanja": "脫魔",
+    "english": "Demon Shedding",
+    "category": "misc",
+    "frequency": 14,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사형",
+    "hanja": "师兄",
+    "english": "Senior Brother",
+    "category": "character titles",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "동학",
+    "hanja": "東學",
+    "english": "Dong Hak",
+    "category": "character names",
+    "frequency": 13,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대성",
+    "hanja": "大成",
+    "english": "complete mastery",
+    "category": "skills and techniques",
+    "frequency": 11,
+    "ambiguous": false
+  },
+  {
+    "hangul": "장원",
+    "hanja": "壯元",
+    "english": "Jang Won",
+    "category": "character names",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정파",
+    "hanja": "正派",
+    "english": "orthodox sects",
+    "category": "locations and organizations",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "입마",
+    "hanja": "入魔",
+    "english": "Demonization",
+    "category": "misc",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "초식",
+    "hanja": "招式",
+    "english": "technique",
+    "category": "misc",
+    "frequency": 8,
+    "ambiguous": false
+  },
+  {
+    "hangul": "비무",
+    "hanja": "比武",
+    "english": "duel",
+    "category": "misc",
+    "frequency": 8,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마교",
+    "hanja": "魔教",
+    "english": "the Demonic Cult",
+    "category": "locations and organizations",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "단전",
+    "hanja": "丹田",
+    "english": "dantian",
+    "category": "skills and techniques",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "극마",
+    "hanja": "極魔",
+    "english": "Ultimate Demonic Realm",
+    "category": "misc",
+    "frequency": 7,
+    "ambiguous": false
+  },
+  {
+    "hangul": "중원",
+    "hanja": "中原",
+    "english": "Central Plains",
+    "category": "locations and organizations",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무관",
+    "hanja": "武馆",
+    "english": "martial arts academy",
+    "category": "locations and organizations",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "별호",
+    "hanja": "别号",
+    "english": "alias",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "수하",
+    "hanja": "手下",
+    "english": "subordinate",
+    "category": "character titles",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "오성",
+    "hanja": "悟性",
+    "english": "insight",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "태현",
+    "hanja": "太賢",
+    "english": "Tae Hyeon",
+    "category": "character names",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "음기",
+    "hanja": "陰氣",
+    "english": "Yin Qi",
+    "category": "misc",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "검객",
+    "hanja": "剑客",
+    "english": "swordsman",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마보",
+    "hanja": "馬步",
+    "english": "Horse Stance",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "소저",
+    "hanja": "小姐",
+    "english": "Young Lady",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "내기",
+    "hanja": "内气",
+    "english": "inner qi",
+    "category": "skills and techniques",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "첫째",
+    "hanja": "老大",
+    "english": "big brother",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "장사",
+    "hanja": "长沙",
+    "english": "Changsha",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "사부",
+    "hanja": "师傅",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "군사",
+    "hanja": "军师",
+    "english": "strategist",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "살기",
+    "hanja": "杀气",
+    "english": "killing intent",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "경공",
+    "hanja": "轻功",
+    "english": "movement arts",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "보법",
+    "hanja": "步法",
+    "english": "movement arts",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "유시",
+    "hanja": "酉時",
+    "english": "Yu Si",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "국사",
+    "hanja": "國史",
+    "english": "Guk Sa",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "명교",
+    "hanja": "明教",
+    "english": "the Ming Cult",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "본교",
+    "hanja": "本教",
+    "english": "our Cult",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마인",
+    "hanja": "魔人",
+    "english": "demonic practitioner",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "방장",
+    "hanja": "方丈",
+    "english": "Abbot",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "호위",
+    "hanja": "护卫",
+    "english": "bodyguard",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "강호",
+    "hanja": "江湖",
+    "english": "jianghu",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "살수",
+    "hanja": "杀手",
+    "english": "assassin",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무인",
+    "hanja": "武人",
+    "english": "martial artist",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "강기",
+    "hanja": "罡气",
+    "english": "enhanced qi",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "빙공",
+    "hanja": "冰功",
+    "english": "ice arts",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "뇌옥",
+    "hanja": "牢狱",
+    "english": "prison",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "서기",
+    "hanja": "书记",
+    "english": "secretary",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "둘째",
+    "hanja": "老二",
+    "english": "second brother",
+    "category": "character titles",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "화경",
+    "hanja": "化境",
+    "english": "the Transcendent Realm",
+    "category": "skills and techniques",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "무한",
+    "hanja": "武汉",
+    "english": "Wuhan",
+    "category": "locations and organizations",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "젠장",
+    "hanja": "他妈的",
+    "english": "damn it",
+    "category": "misc",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "천양",
+    "hanja": "千陽",
+    "english": "Cheon Yang",
+    "category": "character names",
+    "frequency": 1,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스승",
+    "hanja": "",
+    "english": "Master",
+    "category": "character titles",
+    "frequency": 135,
+    "ambiguous": true
+  },
+  {
+    "hangul": "정도",
+    "hanja": "正道",
+    "english": "orthodox creed",
+    "category": "skills and techniques",
+    "frequency": 38,
+    "ambiguous": true
+  },
+  {
+    "hangul": "라도",
+    "hanja": "",
+    "english": "Net Blade",
+    "category": "skills and techniques",
+    "frequency": 33,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마에",
+    "hanja": "",
+    "english": "Demonic Art",
+    "category": "skills and techniques",
+    "frequency": 26,
+    "ambiguous": true
+  },
+  {
+    "hangul": "정검",
+    "hanja": "",
+    "english": "Righteous Sword",
+    "category": "skills and techniques",
+    "frequency": 24,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마의",
+    "hanja": "魔医",
+    "english": "the Demonic Physician",
+    "category": "character titles",
+    "frequency": 21,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마도",
+    "hanja": "魔道",
+    "english": "demonic creed",
+    "category": "skills and techniques",
+    "frequency": 21,
+    "ambiguous": true
+  },
+  {
+    "hangul": "이지",
+    "hanja": "",
+    "english": "Lee Ji",
+    "category": "character names",
+    "frequency": 21,
+    "ambiguous": true
+  },
+  {
+    "hangul": "혼무",
+    "hanja": "",
+    "english": "Soul Dance",
+    "category": "skills and techniques",
+    "frequency": 20,
+    "ambiguous": true
+  },
+  {
+    "hangul": "인의",
+    "hanja": "仁义",
+    "english": "righteousness",
+    "category": "misc",
+    "frequency": 19,
+    "ambiguous": true
+  },
+  {
+    "hangul": "신공",
+    "hanja": "",
+    "english": "Divine Art",
+    "category": "skills and techniques",
+    "frequency": 16,
+    "ambiguous": true
+  },
+  {
+    "hangul": "고문",
+    "hanja": "",
+    "english": "Advisor",
+    "category": "character titles",
+    "frequency": 14,
+    "ambiguous": true
+  },
+  {
+    "hangul": "소수",
+    "hanja": "",
+    "english": "Small Hand",
+    "category": "skills and techniques",
+    "frequency": 14,
+    "ambiguous": true
+  },
+  {
+    "hangul": "기도",
+    "hanja": "气道",
+    "english": "aura",
+    "category": "skills and techniques",
+    "frequency": 13,
+    "ambiguous": true
+  },
+  {
+    "hangul": "신의",
+    "hanja": "神医",
+    "english": "the Divine Physician",
+    "category": "character titles",
+    "frequency": 12,
+    "ambiguous": true
+  },
+  {
+    "hangul": "혈도",
+    "hanja": "穴道",
+    "english": "acupoints",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": true
+  },
+  {
+    "hangul": "빙의",
+    "hanja": "夺舍",
+    "english": "spirit possession",
+    "category": "skills and techniques",
+    "frequency": 9,
+    "ambiguous": true
+  },
+  {
+    "hangul": "비록",
+    "hanja": "",
+    "english": "Secret Record",
+    "category": "item names",
+    "frequency": 8,
+    "ambiguous": true
+  },
+  {
+    "hangul": "고수",
+    "hanja": "",
+    "english": "Expert",
+    "category": "character titles",
+    "frequency": 7,
+    "ambiguous": true
+  },
+  {
+    "hangul": "시진",
+    "hanja": "",
+    "english": "Shichen",
+    "category": "misc",
+    "frequency": 7,
+    "ambiguous": true
+  },
+  {
+    "hangul": "교를",
+    "hanja": "",
+    "english": "Cult",
+    "category": "locations and organizations",
+    "frequency": 7,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마를",
+    "hanja": "",
+    "english": "Demonic Art",
+    "category": "skills and techniques",
+    "frequency": 7,
+    "ambiguous": true
+  },
+  {
+    "hangul": "태산",
+    "hanja": "",
+    "english": "Mount Tai",
+    "category": "locations and organizations",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "장법",
+    "hanja": "",
+    "english": "Palm Technique",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "문장",
+    "hanja": "",
+    "english": "Clan Leader",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "역도",
+    "hanja": "",
+    "english": "Rebel",
+    "category": "character titles",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "수법",
+    "hanja": "",
+    "english": "Hand Technique",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "팔검",
+    "hanja": "",
+    "english": "Eight Swords",
+    "category": "skills and techniques",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "미륵",
+    "hanja": "",
+    "english": "Mireuk",
+    "category": "character names",
+    "frequency": 5,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마로",
+    "hanja": "",
+    "english": "Demonic Path",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": true
+  },
+  {
+    "hangul": "비검",
+    "hanja": "",
+    "english": "Flying Sword",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마무",
+    "hanja": "",
+    "english": "Demonic Dance",
+    "category": "skills and techniques",
+    "frequency": 5,
+    "ambiguous": true
+  },
+  {
+    "hangul": "환생",
+    "hanja": "",
+    "english": "Reincarnation",
+    "category": "skills and techniques",
+    "frequency": 4,
+    "ambiguous": true
+  },
+  {
+    "hangul": "교인",
+    "hanja": "",
+    "english": "Cultist",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": true
+  },
+  {
+    "hangul": "순자",
+    "hanja": "",
+    "english": "Sunja",
+    "category": "character names",
+    "frequency": 4,
+    "ambiguous": true
+  },
+  {
+    "hangul": "성대",
+    "hanja": "",
+    "english": "Vocal Cords",
+    "category": "misc",
+    "frequency": 3,
+    "ambiguous": true
+  },
+  {
+    "hangul": "교관",
+    "hanja": "",
+    "english": "Instructor",
+    "category": "character titles",
+    "frequency": 3,
+    "ambiguous": true
+  },
+  {
+    "hangul": "사시",
+    "hanja": "",
+    "english": "Hour of the Snake",
+    "category": "misc",
+    "frequency": 3,
+    "ambiguous": true
+  },
+  {
+    "hangul": "불교",
+    "hanja": "",
+    "english": "Buddhism",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": true
+  },
+  {
+    "hangul": "보도",
+    "hanja": "宝刀",
+    "english": "treasured blade",
+    "category": "item names",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "팀장",
+    "hanja": "",
+    "english": "Team Leader",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "청풍",
+    "hanja": "",
+    "english": "Clear Wind",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "치매",
+    "hanja": "",
+    "english": "Dementia",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "무의",
+    "hanja": "",
+    "english": "Martial Intent",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "육사",
+    "hanja": "",
+    "english": "Sixth Master",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "진시",
+    "hanja": "",
+    "english": "Hour of the Dragon",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "폭렬",
+    "hanja": "",
+    "english": "Explosive Burst",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "뇌황",
+    "hanja": "",
+    "english": "Lightning Emperor",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "마수",
+    "hanja": "",
+    "english": "Demonic Hand",
+    "category": "skills and techniques",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "검가",
+    "hanja": "",
+    "english": "Sword Clan",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "공명",
+    "hanja": "",
+    "english": "Gong Myeong",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "사제",
+    "hanja": "",
+    "english": "Junior Disciple",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "사공",
+    "hanja": "",
+    "english": "Sagong",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "비도",
+    "hanja": "飞刀",
+    "english": "throwing knife",
+    "category": "item names",
+    "frequency": 1,
+    "ambiguous": true
+  }
+]

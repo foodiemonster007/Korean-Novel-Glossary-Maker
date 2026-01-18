@@ -1,0 +1,135 @@
+Log saved at: 2026-01-03 08:25:47
+Output Excel: forced_to_become_the_heavenly_demon_local.xlsx
+Log file: forced_to_become_the_heavenly_demon_local_log.txt
+============================================================
+
+Configuration saved to config.json
+Configuration saved to config.json
+============================================================
+STARTING NOUN EXTRACTION PIPELINE
+Genre: murim (Korean martial arts novels)
+============================================================
+
+--- STEP 1: Loading and merging nouns ---
+  Loaded 0 existing nouns.
+  Added 562 new nouns from reference file
+Saved 562 nouns to forced_to_become_the_heavenly_demon_local.json
+Found 10 text files in 'forced_to_become_the_heavenly_demon'.
+ - Option: Regex extraction on entire novel text
+  Regex found 40 potential hanja nouns in entire novel.
+Saved 598 nouns to forced_to_become_the_heavenly_demon_local.json
+  Preserved 562 existing, added 36 new
+
+--- STEP 2: Using Local NER Model for entity extraction ---
+Running local NER model...
+
+Local NER Configuration loaded.
+  - Novel directory: forced_to_become_the_heavenly_demon
+  - Model path: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_model
+  - Output directory: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_output
+
+Running local NER pipeline...
+Initializing Korean NER Processor
+Loading model from: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_model
+Korean NER Processor initialized
+
+============================================================
+STARTING NOVEL PROCESSING
+============================================================
+Found 10 files in novel directory
+Read all files. Merged text length: 62212 characters
+Split into 125 chunk(s) for processing
+Starting keyword analysis...
+Processing in 4 batches (batch size: 32)
+Keyword analysis completed. Found 1088 entities total
+
+Simplified glossary exported to: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_output\glossary.json
+  - Unique entries: 277
+Merged glossary: 598 master + 208 new = 806 total
+  (Skipped 69 duplicate hanguls)
+  (Category mapping applied to 208 new entries)
+
+--- STEP 2a: Calculating frequencies and filtering ---
+  Using merged text from glossary (length: 62212 chars)
+  Calculating frequencies for 806 nouns...
+
+--- Performing frequency count across all files ---
+  Total text length: 62,212 characters
+  Frequency count complete.
+  Removed 488 nouns with frequency 0
+
+--- STEP 2b: Running ambiguity detection ---
+Running ambiguity detection on 318 nouns...
+Dictionary cache contains 277 entries
+Ambiguity detection complete:
+  - Total entries kept: 298
+  - Ambiguous entries: 54
+  - Dictionary cache now contains 294 entries
+  - Ambiguity rate: 18.1%
+
+--- Sorting nouns by ambiguity, length, and frequency ---
+  Sorted 298 nouns
+  Clear entries: 244, Ambiguous entries: 54
+Saved 298 nouns to forced_to_become_the_heavenly_demon_local.json
+
+--- STEP 3: Categorizing nouns with AI ---
+
+--- Starting AI categorization for 298 nouns ---
+  Processing 14 nouns that need categorization
+  Processing batch 1/1 (14 nouns)
+--- AI categorization complete ---
+Saved 298 nouns to forced_to_become_the_heavenly_demon_local.json
+
+--- STEP 4: Translating to English with AI ---
+
+--- Starting AI translation for 224 nouns (skipping 74 already translated) ---
+  Processing batch 1/5 (50 nouns)
+  Processing batch 2/5 (50 nouns)
+  Processing batch 3/5 (50 nouns)
+  Processing batch 4/5 (50 nouns)
+  Processing batch 5/5 (24 nouns)
+--- AI translation complete ---
+Saved 298 nouns to forced_to_become_the_heavenly_demon_local.json
+
+--- STEP 5: Guessing missing Hanja with AI ---
+You chose not to guess missing Hanja with AI.
+
+--- STEP 6: Converting to Simplified Chinese ---
+You chose not to convert to Simplified Chinese.
+
+--- STEP 7: Creating Excel file ---
+
+Exporting to Excel files...
+  Total entries: 298
+  Full Glossary entries: 244
+  ambiguous terms entries: 54
+
+Creating master Excel file: forced_to_become_the_heavenly_demon_local_master.xlsx
+  - Full Glossary entries: 244 rows
+  - ambiguous terms entries: 54 rows
+  ✓ Master file created successfully
+
+Creating main Excel file: forced_to_become_the_heavenly_demon_local.xlsx
+  - character names: 35 entries, total frequency: 266
+  - character titles: 93 entries, total frequency: 1116
+  - skills and techniques: 67 entries, total frequency: 625
+  - locations and organizations: 32 entries, total frequency: 208
+  - item names: 2 entries, total frequency: 9
+  - misc: 15 entries, total frequency: 88
+  - Ambiguous terms: 54 entries
+  ✓ Main file created successfully with 6 category worksheet(s)
+
+📊 Final Statistics:
+   Total nouns: 298
+   - character names: 35 entries, total frequency: 266
+   - character titles: 93 entries, total frequency: 1116
+   - skills and techniques: 67 entries, total frequency: 625
+   - locations and organizations: 32 entries, total frequency: 208
+   - item names: 2 entries, total frequency: 9
+   - misc: 15 entries, total frequency: 88
+   - Ambiguous terms: 54 entries
+
+============================================================
+NOVEL GLOSSARY MAKER COMPLETED SUCCESSFULLY!
+============================================================
+

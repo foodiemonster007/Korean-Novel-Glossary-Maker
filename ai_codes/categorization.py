@@ -55,8 +55,9 @@ def categorize_nouns_with_ai(client, noun_list, batch_size=None):
     needs_categorization_items = []
     
     for i, noun in enumerate(noun_list):
-        # Check if category is already filled (not None, not empty string, etc.)
-        if not noun.get('category'):
+        # Check if category is missing, blank, or None
+        current_category = noun.get('category')
+        if current_category is None or str(current_category).strip() == '':
             needs_categorization_indices.append(i)
             needs_categorization_items.append(noun)
     
@@ -140,3 +141,11 @@ def categorize_nouns_with_ai(client, noun_list, batch_size=None):
     
     print("--- AI categorization complete ---")
     return noun_list
+
+def fill_blank_category_as_misc(master_nouns):
+    for item in master_nouns:
+        # Check if category exists and is empty (None, empty string, or whitespace only)
+        if not item.get('category', '').strip():
+            item['category'] = 'misc'
+    
+    return master_nouns

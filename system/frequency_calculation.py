@@ -25,6 +25,10 @@ def calculate_frequencies(noun_list, combined_text):
             noun['frequency'] += count
         else:
             noun['frequency'] = count
+            
+        # Ensure ambiguous field exists (default to False if not)
+        if 'ambiguous' not in noun:
+            noun['ambiguous'] = False
     
     print("  Frequency count complete.")
     return noun_list
@@ -38,14 +42,36 @@ def filter_zero_frequency(noun_list):
     return filtered
 
 def sort_nouns(noun_list):
-    """Sort nouns first by length of hangul (descending), then by frequency (descending)."""
-    print("\n--- Sorting nouns by length and frequency ---")
+    """Sort nouns by ambiguity (False first), then by hangul length (descending), then by frequency (descending)."""
+    print("\n--- Sorting nouns by ambiguity, length, and frequency ---")
     
-    # Sort by hangul length (descending) then frequency (descending)
+    # Ensure ambiguous field exists for all nouns
+    for noun in noun_list:
+        if 'ambiguous' not in noun:
+            noun['ambiguous'] = False
+    
+    # Sort by: 1. ambiguous (False first), 2. hangul length (descending), 3. frequency (descending)
     sorted_nouns = sorted(noun_list, 
-                         key=lambda x: (len(x['hangul']), x.get('frequency', 0)), 
-                         reverse=True)
+                         key=lambda x: (x['ambiguous'], len(x['hangul']), x.get('frequency', 0)), 
+                         reverse=False)  # False comes before True, so we don't reverse for ambiguity
+    
+    # For length and frequency within each ambiguity group, we want descending
+    # We'll do a two-pass sort to get the exact order we want
+    def sort_key(noun):
+        # Return a tuple where:
+        # 1. ambiguous: False (0) sorts before True (1)
+        # 2. length: negative so longer sorts first (descending)
+        # 3. frequency: negative so higher sorts first (descending)
+        ambiguous_val = 1 if noun['ambiguous'] else 0
+        return (ambiguous_val, -len(noun['hangul']), -noun.get('frequency', 0))
+    
+    sorted_nouns = sorted(noun_list, key=sort_key)
     
     print(f"  Sorted {len(sorted_nouns)} nouns")
+    
+    # Show some statistics
+    ambiguous_count = sum(1 for noun in sorted_nouns if noun['ambiguous'])
+    clear_count = len(sorted_nouns) - ambiguous_count
+    print(f"  Clear entries: {clear_count}, Ambiguous entries: {ambiguous_count}")
+    
     return sorted_nouns
-

@@ -5,3 +5,7 @@ xlsxwriter>=3.0.0
 plyer>=2.0.0
 openpyxl>=3.1.0
 packaging>=21.0
+torch
+transformers
+datasets
+requests

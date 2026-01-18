@@ -1,0 +1,132 @@
+Log saved at: 2026-01-03 08:06:46
+Output Excel: doctors_rebirth_local.xlsx
+Log file: doctors_rebirth_local_log.txt
+============================================================
+
+Configuration saved to config.json
+Configuration saved to config.json
+============================================================
+STARTING NOUN EXTRACTION PIPELINE
+Genre: murim (Korean martial arts novels)
+============================================================
+
+--- STEP 1: Loading and merging nouns ---
+  Loaded 0 existing nouns.
+  Added 562 new nouns from reference file
+Saved 562 nouns to doctors_rebirth_local.json
+Found 10 text files in 'doctors_rebirth'.
+ - Option: Regex extraction on entire novel text
+  Regex found 13 potential hanja nouns in entire novel.
+Saved 571 nouns to doctors_rebirth_local.json
+  Preserved 562 existing, added 9 new
+
+--- STEP 2: Using Local NER Model for entity extraction ---
+Running local NER model...
+
+Local NER Configuration loaded.
+  - Novel directory: doctors_rebirth
+  - Model path: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_model
+  - Output directory: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_output
+
+Running local NER pipeline...
+Initializing Korean NER Processor
+Loading model from: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_model
+Korean NER Processor initialized
+
+============================================================
+STARTING NOVEL PROCESSING
+============================================================
+Found 10 files in novel directory
+Read all files. Merged text length: 51949 characters
+Split into 102 chunk(s) for processing
+Starting keyword analysis...
+Processing in 4 batches (batch size: 32)
+Keyword analysis completed. Found 596 entities total
+
+Simplified glossary exported to: A:\Downloads A\Codes\Novel Glossary Maker\local_search\ner_output\glossary.json
+  - Unique entries: 113
+Merged glossary: 571 master + 72 new = 643 total
+  (Skipped 41 duplicate hanguls)
+  (Category mapping applied to 72 new entries)
+
+--- STEP 2a: Calculating frequencies and filtering ---
+  Using merged text from glossary (length: 51949 chars)
+  Calculating frequencies for 643 nouns...
+
+--- Performing frequency count across all files ---
+  Total text length: 51,949 characters
+  Frequency count complete.
+  Removed 477 nouns with frequency 0
+
+--- STEP 2b: Running ambiguity detection ---
+Running ambiguity detection on 166 nouns...
+Dictionary cache contains 275 entries
+Ambiguity detection complete:
+  - Total entries kept: 163
+  - Ambiguous entries: 21
+  - Dictionary cache now contains 277 entries
+  - Ambiguity rate: 12.9%
+
+--- Sorting nouns by ambiguity, length, and frequency ---
+  Sorted 163 nouns
+  Clear entries: 142, Ambiguous entries: 21
+Saved 163 nouns to doctors_rebirth_local.json
+
+--- STEP 3: Categorizing nouns with AI ---
+
+--- Starting AI categorization for 163 nouns ---
+  Processing 4 nouns that need categorization
+  Processing batch 1/1 (4 nouns)
+--- AI categorization complete ---
+Saved 163 nouns to doctors_rebirth_local.json
+
+--- STEP 4: Translating to English with AI ---
+
+--- Starting AI translation for 78 nouns (skipping 85 already translated) ---
+  Processing batch 1/2 (50 nouns)
+  Processing batch 2/2 (28 nouns)
+--- AI translation complete ---
+Saved 163 nouns to doctors_rebirth_local.json
+
+--- STEP 5: Guessing missing Hanja with AI ---
+You chose not to guess missing Hanja with AI.
+
+--- STEP 6: Converting to Simplified Chinese ---
+You chose not to convert to Simplified Chinese.
+
+--- STEP 7: Creating Excel file ---
+
+Exporting to Excel files...
+  Total entries: 163
+  Full Glossary entries: 142
+  ambiguous terms entries: 21
+
+Creating master Excel file: doctors_rebirth_local_master.xlsx
+  - Full Glossary entries: 142 rows
+  - ambiguous terms entries: 21 rows
+  ✓ Master file created successfully
+
+Creating main Excel file: doctors_rebirth_local.xlsx
+  - character names: 17 entries, total frequency: 750
+  - character titles: 50 entries, total frequency: 224
+  - skills and techniques: 14 entries, total frequency: 63
+  - locations and organizations: 38 entries, total frequency: 358
+  - item names: 15 entries, total frequency: 46
+  - misc: 8 entries, total frequency: 15
+  - Ambiguous terms: 21 entries
+  ✓ Main file created successfully with 6 category worksheet(s)
+
+📊 Final Statistics:
+   Total nouns: 163
+   - character names: 17 entries, total frequency: 750
+   - character titles: 50 entries, total frequency: 224
+   - skills and techniques: 14 entries, total frequency: 63
+   - locations and organizations: 38 entries, total frequency: 358
+   - item names: 15 entries, total frequency: 46
+   - misc: 8 entries, total frequency: 15
+   - Ambiguous terms: 21 entries
+
+============================================================
+NOVEL GLOSSARY MAKER COMPLETED SUCCESSFULLY!
+============================================================
+

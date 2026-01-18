@@ -1,0 +1,128 @@
+Log saved at: 2026-01-02 16:33:25
+Output Excel: assistant_manager_kim_ai
+Log file: assistant_manager_kim_ai_log.txt
+============================================================
+
+Configuration saved to config.json
+Configuration saved to config.json
+============================================================
+STARTING NOUN EXTRACTION PIPELINE
+Genre: modern (Korean martial arts novels)
+============================================================
+
+--- STEP 1: Loading and merging nouns ---
+  Loaded 0 existing nouns.
+No reference file found or specified. Skipping reference loading.
+  No reference nouns found or reference file is empty
+Saved 0 nouns to assistant_manager_kim_ai.json
+Found 10 text files in 'assistant_manager_kim'.
+ - Option: Regex extraction on entire novel text
+  Regex found 0 potential hanja nouns in entire novel.
+Saved 0 nouns to assistant_manager_kim_ai.json
+  Preserved 0 existing, added 0 new
+
+--- STEP 2: AI extraction by chunks (Gemini) ---
+
+--- Step 2: AI extraction on 2 chunks ---
+  Grouped files into 2 chunks of up to 5 files each.
+
+--- Processing AI chunk 1/2 ---
+  Files: ['401.txt', '402.txt', '403.txt', '404.txt', '405.txt']
+  Attempt 1/3 for AI discovery...
+  AI discovered 35 new nouns in this chunk.
+Saved 35 nouns to assistant_manager_kim_ai.json
+  Progress saved. Total nouns so far: 35
+
+--- Processing AI chunk 2/2 ---
+  Files: ['406.txt', '407.txt', '408.txt', '409.txt', '410.txt']
+  Attempt 1/3 for AI discovery...
+  AI discovered 22 new nouns in this chunk.
+Saved 57 nouns to assistant_manager_kim_ai.json
+  Progress saved. Total nouns so far: 57
+
+--- AI extraction complete ---
+  Total AI-discovered nouns: 57
+  Grand total nouns: 57
+
+--- STEP 2b: Calculating frequencies and filtering ---
+
+--- Performing frequency count across all files ---
+  Total text length: 48,103 characters
+  Frequency count complete.
+
+--- STEP 2c: Running ambiguity detection ---
+Running ambiguity detection on 57 nouns...
+Dictionary cache contains 154 entries
+Ambiguity detection complete:
+  - Total entries kept: 56
+  - Ambiguous entries: 5
+  - Dictionary cache now contains 159 entries
+  - Ambiguity rate: 8.9%
+
+--- Sorting nouns by ambiguity, length, and frequency ---
+  Sorted 56 nouns
+  Clear entries: 51, Ambiguous entries: 5
+Saved 56 nouns to assistant_manager_kim_ai.json
+
+--- STEP 3: Categorizing nouns with AI ---
+
+--- Starting AI categorization for 56 nouns ---
+  Processing 56 nouns that need categorization
+  Processing batch 1/2 (50 nouns)
+  Processing batch 2/2 (6 nouns)
+--- AI categorization complete ---
+Saved 56 nouns to assistant_manager_kim_ai.json
+
+--- STEP 4: Translating to English with AI ---
+
+--- Starting AI translation for 56 nouns (skipping 0 already translated) ---
+  Processing batch 1/2 (50 nouns)
+  Processing batch 2/2 (6 nouns)
+--- AI translation complete ---
+Saved 56 nouns to assistant_manager_kim_ai.json
+
+--- STEP 5: Guessing missing Hanja with AI ---
+
+--- Starting AI hanja guessing for 56 nouns (skipping 0 already have hanja) ---
+  Processing batch 1/2 (50 nouns)
+  Processing batch 2/2 (6 nouns)
+--- AI hanja guessing complete ---
+Saved 56 nouns to assistant_manager_kim_ai.json
+
+--- STEP 6: Converting to Simplified Chinese ---
+Saved 56 nouns to assistant_manager_kim_ai.json
+
+--- STEP 7: Creating Excel file ---
+
+Exporting to Excel files...
+  Total entries: 56
+  Full Glossary entries: 51
+  ambiguous terms entries: 5
+
+Creating master Excel file: assistant_manager_kim_ai_master.xlsx
+  - Full Glossary entries: 51 rows
+  - ambiguous terms entries: 5 rows
+  ✓ Master file created successfully
+
+Creating main Excel file: assistant_manager_kim_ai.xlsx
+  - character names: 18 entries, total frequency: 349
+  - character titles: 5 entries, total frequency: 8
+  - locations and organizations: 9 entries, total frequency: 78
+  - item names: 8 entries, total frequency: 34
+  - misc: 11 entries, total frequency: 20
+  - Ambiguous terms: 5 entries
+  ✓ Main file created successfully with 5 category worksheet(s)
+
+📊 Final Statistics:
+   Total nouns: 56
+   - character names: 18 entries, total frequency: 349
+   - character titles: 5 entries, total frequency: 8
+   - locations and organizations: 9 entries, total frequency: 78
+   - item names: 8 entries, total frequency: 34
+   - misc: 11 entries, total frequency: 20
+   - Ambiguous terms: 5 entries
+
+============================================================
+NOVEL GLOSSARY MAKER COMPLETED SUCCESSFULLY!
+============================================================
+

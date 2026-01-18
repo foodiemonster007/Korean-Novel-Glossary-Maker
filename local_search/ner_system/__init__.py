@@ -1,0 +1,3 @@
+"""
+Korean NER System package.
+"""

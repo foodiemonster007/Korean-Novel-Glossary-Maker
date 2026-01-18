@@ -1,0 +1,498 @@
+[
+  {
+    "hangul": "화로 고등학교 취미 발견 동아리의",
+    "hanja": "",
+    "english": "Hwaro High School Hobby Discovery Club",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "취미 발견 동아리",
+    "hanja": "",
+    "english": "Hobby Discovery Club",
+    "category": "locations and organizations",
+    "frequency": 9,
+    "ambiguous": false
+  },
+  {
+    "hangul": "큐티프리티비주얼R",
+    "hanja": "",
+    "english": "Cute Pretty Visual R",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "센터 황제 클라스",
+    "hanja": "",
+    "english": "Center Emperor Class",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "내가 하고픈 말은",
+    "hanja": "",
+    "english": "Words I Want to Say",
+    "category": "item names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "오프 더 스토리",
+    "hanja": "",
+    "english": "Off the Story",
+    "category": "misc",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "인 마이 오피스",
+    "hanja": "",
+    "english": "In My Office",
+    "category": "misc",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스터디 윗 미",
+    "hanja": "",
+    "english": "Study With Me",
+    "category": "locations and organizations",
+    "frequency": 8,
+    "ambiguous": false
+  },
+  {
+    "hangul": "화로 고등학교",
+    "hanja": "",
+    "english": "Hwaro High School",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "세 번째 편지",
+    "hanja": "",
+    "english": "Third Letter",
+    "category": "item names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "구자한 씨",
+    "hanja": "",
+    "english": "Gu Jahan",
+    "category": "character names",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "단독 보도",
+    "hanja": "",
+    "english": "Exclusive Report",
+    "category": "locations and organizations",
+    "frequency": 6,
+    "ambiguous": false
+  },
+  {
+    "hangul": "고 실장님",
+    "hanja": "",
+    "english": "Manager Go",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "평산업으로",
+    "hanja": "",
+    "english": "Pyeong Industrial",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "고용노동부",
+    "hanja": "",
+    "english": "Ministry of Employment and Labor",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "윤재 씨",
+    "hanja": "",
+    "english": "Yun Jae",
+    "category": "character names",
+    "frequency": 29,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이월 씨",
+    "hanja": "",
+    "english": "Iwol",
+    "category": "character names",
+    "frequency": 27,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스파크의",
+    "hanja": "",
+    "english": "Spark",
+    "category": "character names",
+    "frequency": 10,
+    "ambiguous": false
+  },
+  {
+    "hangul": "김 대리",
+    "hanja": "",
+    "english": "Assistant Manager Kim",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "고 실장",
+    "hanja": "",
+    "english": "Manager Go",
+    "category": "character titles",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "시스템이",
+    "hanja": "",
+    "english": "System",
+    "category": "character names",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "한평산업",
+    "hanja": "",
+    "english": "Hanpyeong Industrial",
+    "category": "locations and organizations",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "인온하랑",
+    "hanja": "",
+    "english": "Inon Harang",
+    "category": "item names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "대한민국",
+    "hanja": "",
+    "english": "Republic of Korea",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "남 부장",
+    "hanja": "",
+    "english": "Department Head Nam",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "정성빈",
+    "hanja": "",
+    "english": "Jeong Seongbin",
+    "category": "character names",
+    "frequency": 90,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스파크",
+    "hanja": "",
+    "english": "Spark",
+    "category": "character names",
+    "frequency": 87,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이청현",
+    "hanja": "",
+    "english": "Lee Cheonghyeon",
+    "category": "character names",
+    "frequency": 71,
+    "ambiguous": false
+  },
+  {
+    "hangul": "강기연",
+    "hanja": "",
+    "english": "Kang Giyeon",
+    "category": "character names",
+    "frequency": 50,
+    "ambiguous": false
+  },
+  {
+    "hangul": "김이월",
+    "hanja": "",
+    "english": "Kim Iwol",
+    "category": "character names",
+    "frequency": 44,
+    "ambiguous": false
+  },
+  {
+    "hangul": "성빈이",
+    "hanja": "",
+    "english": "Seongbin",
+    "category": "character names",
+    "frequency": 36,
+    "ambiguous": false
+  },
+  {
+    "hangul": "박주우",
+    "hanja": "",
+    "english": "Park Juu",
+    "category": "character names",
+    "frequency": 34,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이월이",
+    "hanja": "",
+    "english": "Iwol",
+    "category": "character names",
+    "frequency": 24,
+    "ambiguous": false
+  },
+  {
+    "hangul": "시스템",
+    "hanja": "",
+    "english": "System",
+    "category": "character names",
+    "frequency": 17,
+    "ambiguous": false
+  },
+  {
+    "hangul": "구자한",
+    "hanja": "",
+    "english": "Gu Jahan",
+    "category": "character names",
+    "frequency": 17,
+    "ambiguous": false
+  },
+  {
+    "hangul": "아지트",
+    "hanja": "",
+    "english": "Hideout",
+    "category": "locations and organizations",
+    "frequency": 14,
+    "ambiguous": false
+  },
+  {
+    "hangul": "장준후",
+    "hanja": "",
+    "english": "Jang Junhu",
+    "category": "character names",
+    "frequency": 12,
+    "ambiguous": false
+  },
+  {
+    "hangul": "수능을",
+    "hanja": "",
+    "english": "Suneung",
+    "category": "character names",
+    "frequency": 5,
+    "ambiguous": false
+  },
+  {
+    "hangul": "스피커",
+    "hanja": "",
+    "english": "Speaker",
+    "category": "character names",
+    "frequency": 4,
+    "ambiguous": false
+  },
+  {
+    "hangul": "버블팝",
+    "hanja": "",
+    "english": "Bubble Pop",
+    "category": "locations and organizations",
+    "frequency": 3,
+    "ambiguous": false
+  },
+  {
+    "hangul": "지구가",
+    "hanja": "",
+    "english": "Jigu",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "마인드",
+    "hanja": "",
+    "english": "Mind",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "책임자",
+    "hanja": "",
+    "english": "Person in Charge",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "미튜브",
+    "hanja": "",
+    "english": "MeTube",
+    "category": "locations and organizations",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "이월아",
+    "hanja": "",
+    "english": "Iwol",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": false
+  },
+  {
+    "hangul": "성빈",
+    "hanja": "",
+    "english": "Seongbin",
+    "category": "character names",
+    "frequency": 81,
+    "ambiguous": true
+  },
+  {
+    "hangul": "이청",
+    "hanja": "",
+    "english": "Lee Cheong",
+    "category": "character names",
+    "frequency": 79,
+    "ambiguous": true
+  },
+  {
+    "hangul": "정성",
+    "hanja": "",
+    "english": "Jeong Seong",
+    "category": "character names",
+    "frequency": 65,
+    "ambiguous": true
+  },
+  {
+    "hangul": "이월",
+    "hanja": "",
+    "english": "Iwol",
+    "category": "character names",
+    "frequency": 59,
+    "ambiguous": true
+  },
+  {
+    "hangul": "김이",
+    "hanja": "",
+    "english": "Kim I",
+    "category": "character names",
+    "frequency": 42,
+    "ambiguous": true
+  },
+  {
+    "hangul": "박주",
+    "hanja": "",
+    "english": "Bak Ju",
+    "category": "character names",
+    "frequency": 38,
+    "ambiguous": true
+  },
+  {
+    "hangul": "윤재",
+    "hanja": "",
+    "english": "Yun Jae",
+    "category": "character names",
+    "frequency": 38,
+    "ambiguous": true
+  },
+  {
+    "hangul": "강기",
+    "hanja": "",
+    "english": "Gang Gi",
+    "category": "character names",
+    "frequency": 34,
+    "ambiguous": true
+  },
+  {
+    "hangul": "수능",
+    "hanja": "",
+    "english": "Su Neung",
+    "category": "character names",
+    "frequency": 27,
+    "ambiguous": true
+  },
+  {
+    "hangul": "영어",
+    "hanja": "",
+    "english": "English",
+    "category": "misc",
+    "frequency": 13,
+    "ambiguous": true
+  },
+  {
+    "hangul": "주경",
+    "hanja": "",
+    "english": "Ju Gyeong",
+    "category": "character names",
+    "frequency": 6,
+    "ambiguous": true
+  },
+  {
+    "hangul": "UA",
+    "hanja": "",
+    "english": "UA",
+    "category": "locations and organizations",
+    "frequency": 5,
+    "ambiguous": true
+  },
+  {
+    "hangul": "UA",
+    "hanja": "",
+    "english": "UA",
+    "category": "character names",
+    "frequency": 5,
+    "ambiguous": true
+  },
+  {
+    "hangul": "미션",
+    "hanja": "",
+    "english": "Mi Syeon",
+    "category": "character names",
+    "frequency": 4,
+    "ambiguous": true
+  },
+  {
+    "hangul": "별빛",
+    "hanja": "",
+    "english": "Byeol Bit",
+    "category": "character names",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "새해",
+    "hanja": "",
+    "english": "New Year",
+    "category": "misc",
+    "frequency": 2,
+    "ambiguous": true
+  },
+  {
+    "hangul": "문어",
+    "hanja": "",
+    "english": "Octopus",
+    "category": "character titles",
+    "frequency": 2,
+    "ambiguous": true
+  }
+]

@@ -22,6 +22,11 @@ REQUIRED_PACKAGES = [
     ("openpyxl", "3.1.0"),
     ("packaging", "21.0"),
     ("tkinter", None),  # Usually comes with Python
+    # === NEW PACKAGES ADDED FOR NER PIPELINE ===
+    ("torch", ""),        
+    ("transformers", ""),   
+    ("datasets", ""),      
+    ("requests", ""),             
 ]
 
 def check_python_version():
@@ -64,12 +69,42 @@ def check_tkinter():
             print("     Arch: sudo pacman -S tk")
         return False
 
+def check_pytorch_installation():
+    """
+    Check if PyTorch is installed and if GPU (CUDA) is available.
+    Provides detailed information about the installation.
+    """
+    try:
+        import torch
+        print(f"✅ PyTorch {torch.__version__} is installed")
+        
+        # Check CUDA availability
+        cuda_available = torch.cuda.is_available()
+        if cuda_available:
+            print(f"   ✅ CUDA is available")
+            print(f"   CUDA Version: {torch.version.cuda}")
+            print(f"   GPU Device: {torch.cuda.get_device_name(0)}")
+        else:
+            print("   ℹ️  CUDA is not available (running on CPU)")
+        
+        return True
+    except ImportError:
+        print("❌ PyTorch is not installed")
+        return False
+    except Exception as e:
+        print(f"⚠️  Error checking PyTorch: {e}")
+        return False
+
 def check_package(package_name, min_version=None):
     """Check if a package is installed and meets minimum version requirement."""
     try:
         # Special handling for tkinter
         if package_name == "tkinter":
             return check_tkinter()
+        
+        # Special handling for PyTorch - use dedicated function
+        if package_name == "torch":
+            return check_pytorch_installation()
         
         # Special handling for packages where import name differs from package name
         import_mapping = {
@@ -80,11 +115,12 @@ def check_package(package_name, min_version=None):
         # Get the actual module name to import
         module_name = import_mapping.get(package_name, package_name)
         
-        # Import the package
+        # Import the module using the correct name
         module = __import__(module_name)
         
-        # Check version if specified
-        if min_version and hasattr(module, '__version__'):
+        # Check version if specified and if the module has a version attribute
+        # IMPORTANT: Skip version check for packages where min_version is empty or "latest"
+        if min_version and min_version.strip() and hasattr(module, '__version__'):
             current_version = module.__version__
             from packaging import version
             
@@ -92,9 +128,16 @@ def check_package(package_name, min_version=None):
                 print(f"⚠️  {package_name} version {current_version} is below required {min_version}")
                 return False
             else:
+                # Use the original package_name for the success message
                 print(f"✅ {package_name} {current_version} (minimum: {min_version})")
         else:
-            print(f"✅ {package_name} is installed")
+            # If no version check needed or version attribute not found, just confirm it's installed
+            # Try to get the version for display if possible
+            if hasattr(module, '__version__'):
+                print(f"✅ {package_name} {module.__version__} is installed")
+            else:
+                print(f"✅ {package_name} is installed")
+        
         return True
         
     except ImportError:
@@ -105,17 +148,25 @@ def check_package(package_name, min_version=None):
         return False
 
 def install_package(package_name, version=None):
-    """Install or upgrade a package using pip."""
+    """Install or upgrade a package using pip with special handling for PyTorch."""
     try:
-        if version:
+        # === SPECIAL HANDLING FOR PyTorch ===
+        if package_name == "torch":
+            return install_pytorch_with_fallback()
+        
+        # For other packages, use standard installation
+        if version and version.strip() and version.lower() != "latest":
             package_spec = f"{package_name}>={version}"
         else:
-            package_spec = package_name
+            package_spec = package_name  # pip will get the latest
         
         print(f"Installing {package_spec}...")
         
         # Use subprocess to call pip
-        cmd = [sys.executable, "-m", "pip", "install", "--upgrade", package_spec]
+        if version and version.lower() == "latest":
+            cmd = [sys.executable, "-m", "pip", "install", "--upgrade", package_name]
+        else:
+            cmd = [sys.executable, "-m", "pip", "install", package_spec]
         
         # For tkinter on Linux, we need different commands
         if package_name == "tkinter":
@@ -141,13 +192,77 @@ def install_package(package_name, version=None):
         print(f"❌ Unexpected error installing {package_spec}: {e}")
         return False
 
+def install_pytorch_with_fallback():
+    """
+    Install PyTorch with CUDA support first, fall back to CPU-only if failed.
+    Uses the latest stable version as of the current date.
+    """
+    print("\n" + "=" * 60)
+    print("Installing PyTorch with intelligent GPU/CPU detection...")
+    
+    # First, try to install the latest PyTorch with CUDA 12.8 support[citation:10]
+    print("Attempt 1: Installing PyTorch with CUDA 12.8 support...")
+    cuda_cmd = [
+        sys.executable, "-m", "pip", "install",
+        "torch", "torchvision", "torchaudio",
+        "--index-url", "https://download.pytorch.org/whl/cu128"
+    ]
+    
+    try:
+        result = subprocess.run(cuda_cmd, capture_output=True, text=True)
+        if result.returncode == 0:
+            print("✅ Successfully installed PyTorch with CUDA support")
+            
+            # Verify CUDA is available
+            import torch
+            if torch.cuda.is_available():
+                print(f"   ✅ CUDA detected: {torch.cuda.get_device_name(0)}")
+            else:
+                print("   ℹ️  PyTorch with CUDA installed, but no GPU detected")
+            
+            return True
+        else:
+            print(f"❌ CUDA installation failed: {result.stderr[:200] if result.stderr else 'Unknown error'}")
+            print("Falling back to CPU-only installation...")
+    
+    except Exception as e:
+        print(f"❌ Error during CUDA installation: {e}")
+        print("Falling back to CPU-only installation...")
+    
+    # Fallback: Install CPU-only version[citation:2][citation:10]
+    print("\nAttempt 2: Installing CPU-only PyTorch...")
+    cpu_cmd = [
+        sys.executable, "-m", "pip", "install",
+        "torch", "torchvision", "torchaudio",
+        "--index-url", "https://download.pytorch.org/whl/cpu"
+    ]
+    
+    try:
+        result = subprocess.run(cpu_cmd, capture_output=True, text=True)
+        if result.returncode == 0:
+            print("✅ Successfully installed CPU-only PyTorch")
+            
+            # Verify installation
+            import torch
+            print(f"   PyTorch {torch.__version__} installed")
+            print("   Running in CPU mode")
+            
+            return True
+        else:
+            print(f"❌ CPU installation also failed: {result.stderr[:200] if result.stderr else 'Unknown error'}")
+            return False
+    
+    except Exception as e:
+        print(f"❌ Error during CPU installation: {e}")
+        return False
+
 def create_requirements_file():
     """Create a requirements.txt file for future use."""
     requirements_content = ""
     for package, version in REQUIRED_PACKAGES:
         if package == "tkinter":
             continue  # Skip tkinter from requirements.txt
-        if version:
+        if version and version.lower() != "latest":
             requirements_content += f"{package}>={version}\n"
         else:
             requirements_content += f"{package}\n"
@@ -163,7 +278,6 @@ def check_optional_packages():
     print("Checking optional packages...")
     
     optional_packages = [
-        ("tqdm", "4.65.0", "Progress bars for long operations"),
         ("colorama", "0.4.6", "Colored terminal output"),
         ("pytest", "7.4.0", "Testing framework"),
     ]

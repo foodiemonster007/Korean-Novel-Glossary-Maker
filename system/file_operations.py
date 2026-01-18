@@ -31,7 +31,6 @@ def load_nouns_json(filename=None):
         try:
             with open(filename, 'r', encoding='utf-8') as f:
                 nouns = json.load(f)
-            print(f"Loaded {len(nouns)} nouns from {filename}")
             return nouns
         except Exception as e:
             print(f"Error loading JSON: {e}")
@@ -84,7 +83,6 @@ def load_reference_nouns():
                 }
                 reference_nouns.append(noun_obj)
         
-        print(f"Loaded {len(reference_nouns)} reference nouns from '{reference_file}'")
         return reference_nouns
         
     except Exception as e:
@@ -92,28 +90,32 @@ def load_reference_nouns():
         return []
 
 def get_text_files_from_folder(folder_path=None):
-    """Get all text files from the folder and sort them numerically."""
+    """Get all text files from the folder and sort them naturally (numerically/alphabetically)."""
     if folder_path is None:
         folder_path = config_loader.RAWS_FOLDER
-    
-    text_files = []
     
     if not os.path.exists(folder_path):
         print(f"Error: The folder '{folder_path}' was not found.")
         return None
     
+    # Helper function for natural sorting
+    def natural_sort_key(text):
+        return [
+            int(part) if part.isdigit() else part.lower()
+            for part in re.split(r'(\d+)', text)
+        ]
+    
+    # Get all .txt files
+    text_files = []
     for filename in os.listdir(folder_path):
         if filename.endswith('.txt'):
-            match = re.match(r'(\d+)\.txt$', filename)
-            if match:
-                num = int(match.group(1))
-                text_files.append((num, filename))
+            text_files.append(os.path.join(folder_path, filename))
     
-    text_files.sort(key=lambda x: x[0])
-    sorted_files = [os.path.join(folder_path, filename) for _, filename in text_files]
+    # Sort files using natural sort
+    text_files.sort(key=lambda x: natural_sort_key(os.path.basename(x)))
     
-    print(f"Found {len(sorted_files)} text files in '{folder_path}'.")
-    return sorted_files
+    print(f"Found {len(text_files)} text files in '{folder_path}'.")
+    return text_files
 
 def group_files_into_chunks(file_list, chunk_size=None):
     """Group files into chunks of specified size."""

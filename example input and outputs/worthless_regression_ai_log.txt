@@ -1,0 +1,123 @@
+Log saved at: 2026-01-02 19:09:03
+Output Excel: worthless_regression_ai
+Log file: worthless_regression_ai_log.txt
+============================================================
+
+Configuration saved to config.json
+Configuration saved to config.json
+============================================================
+STARTING NOUN EXTRACTION PIPELINE
+Genre: murim (Korean modern day novels)
+============================================================
+
+--- STEP 1: Loading and merging nouns ---
+  Loaded 0 existing nouns.
+  Added 562 new nouns from reference file
+Saved 562 nouns to worthless_regression_ai.json
+Found 10 text files in 'worthless_regression'.
+ - Option: Regex extraction on entire novel text
+  Regex found 0 potential hanja nouns in entire novel.
+Saved 562 nouns to worthless_regression_ai.json
+  Preserved 562 existing, added 0 new
+
+--- STEP 2: AI extraction by chunks (Gemini) ---
+
+--- Step 2: AI extraction on 2 chunks ---
+  Grouped files into 2 chunks of up to 5 files each.
+
+--- Processing AI chunk 1/2 ---
+  Files: ['001.txt', '002.txt', '003.txt', '004.txt', '005.txt']
+  Attempt 1/3 for AI discovery...
+  AI discovered 20 new nouns in this chunk.
+Saved 582 nouns to worthless_regression_ai.json
+  Progress saved. Total nouns so far: 582
+
+--- Processing AI chunk 2/2 ---
+  Files: ['006.txt', '007.txt', '008.txt', '009.txt', '010.txt']
+  Attempt 1/3 for AI discovery...
+  AI discovered 11 new nouns in this chunk.
+Saved 593 nouns to worthless_regression_ai.json
+  Progress saved. Total nouns so far: 593
+
+--- AI extraction complete ---
+  Total AI-discovered nouns: 31
+  Grand total nouns: 593
+
+--- STEP 2b: Calculating frequencies and filtering ---
+
+--- Performing frequency count across all files ---
+  Total text length: 54,837 characters
+  Frequency count complete.
+  Removed 505 nouns with frequency 0
+
+--- STEP 2c: Running ambiguity detection ---
+Running ambiguity detection on 88 nouns...
+Dictionary cache contains 266 entries
+Ambiguity detection complete:
+  - Total entries kept: 88
+  - Ambiguous entries: 15
+  - Dictionary cache now contains 271 entries
+  - Ambiguity rate: 17.0%
+
+--- Sorting nouns by ambiguity, length, and frequency ---
+  Sorted 88 nouns
+  Clear entries: 73, Ambiguous entries: 15
+Saved 88 nouns to worthless_regression_ai.json
+
+--- STEP 3: Categorizing nouns with AI ---
+
+--- Starting AI categorization for 88 nouns ---
+  Processing 31 nouns that need categorization
+  Processing batch 1/1 (31 nouns)
+--- AI categorization complete ---
+Saved 88 nouns to worthless_regression_ai.json
+
+--- STEP 4: Translating to English with AI ---
+
+--- Starting AI translation for 31 nouns (skipping 57 already translated) ---
+  Processing batch 1/1 (31 nouns)
+--- AI translation complete ---
+Saved 88 nouns to worthless_regression_ai.json
+
+--- STEP 5: Guessing missing Hanja with AI ---
+You chose not to guess missing Hanja with AI.
+
+--- STEP 6: Converting to Simplified Chinese ---
+You chose not to convert to Simplified Chinese.
+
+--- STEP 7: Creating Excel file ---
+
+Exporting to Excel files...
+  Total entries: 88
+  Full Glossary entries: 73
+  ambiguous terms entries: 15
+
+Creating master Excel file: worthless_regression_ai_master.xlsx
+  - Full Glossary entries: 73 rows
+  - ambiguous terms entries: 15 rows
+  ✓ Master file created successfully
+
+Creating main Excel file: worthless_regression_ai.xlsx
+  - character names: 3 entries, total frequency: 617
+  - character titles: 14 entries, total frequency: 95
+  - skills and techniques: 23 entries, total frequency: 171
+  - locations and organizations: 16 entries, total frequency: 131
+  - item names: 6 entries, total frequency: 36
+  - misc: 11 entries, total frequency: 277
+  - Ambiguous terms: 15 entries
+  ✓ Main file created successfully with 6 category worksheet(s)
+
+📊 Final Statistics:
+   Total nouns: 88
+   - character names: 3 entries, total frequency: 617
+   - character titles: 14 entries, total frequency: 95
+   - skills and techniques: 23 entries, total frequency: 171
+   - locations and organizations: 16 entries, total frequency: 131
+   - item names: 6 entries, total frequency: 36
+   - misc: 11 entries, total frequency: 277
+   - Ambiguous terms: 15 entries
+
+============================================================
+NOVEL GLOSSARY MAKER COMPLETED SUCCESSFULLY!
+============================================================
+

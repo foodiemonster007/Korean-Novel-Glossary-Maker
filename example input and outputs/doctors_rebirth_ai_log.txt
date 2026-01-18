@@ -1,0 +1,127 @@
+Log saved at: 2026-01-02 15:29:37
+Output Excel: doctors_rebirth_ai
+Log file: doctors_rebirth_ai_log.txt
+============================================================
+
+Configuration saved to config.json
+Configuration saved to config.json
+============================================================
+STARTING NOUN EXTRACTION PIPELINE
+Genre: murim (Korean martial arts novels)
+============================================================
+
+--- STEP 1: Loading and merging nouns ---
+  Loaded 0 existing nouns.
+  Added 562 new nouns from reference file
+Saved 562 nouns to doctors_rebirth_ai.json
+Found 10 text files in 'doctors_rebirth'.
+ - Option: Regex extraction on entire novel text
+  Regex found 13 potential hanja nouns in entire novel.
+Saved 571 nouns to doctors_rebirth_ai.json
+  Preserved 562 existing, added 9 new
+
+--- STEP 2: AI extraction by chunks (Gemini) ---
+
+--- Step 2: AI extraction on 2 chunks ---
+  Grouped files into 2 chunks of up to 5 files each.
+
+--- Processing AI chunk 1/2 ---
+  Files: ['0001.txt', '0002.txt', '0003.txt', '0004.txt', '0005.txt']
+  Attempt 1/3 for AI discovery...
+  AI discovered 20 new nouns in this chunk.
+Saved 591 nouns to doctors_rebirth_ai.json
+  Progress saved. Total nouns so far: 591
+
+--- Processing AI chunk 2/2 ---
+  Files: ['0006.txt', '0007.txt', '0008.txt', '0009.txt', '0010.txt']
+  Attempt 1/3 for AI discovery...
+  AI discovered 8 new nouns in this chunk.
+Saved 599 nouns to doctors_rebirth_ai.json
+  Progress saved. Total nouns so far: 599
+
+--- AI extraction complete ---
+  Total AI-discovered nouns: 28
+  Grand total nouns: 599
+
+--- STEP 2b: Calculating frequencies and filtering ---
+
+--- Performing frequency count across all files ---
+  Total text length: 51,958 characters
+  Frequency count complete.
+  Removed 477 nouns with frequency 0
+
+--- STEP 2c: Running ambiguity detection ---
+Running ambiguity detection on 122 nouns...
+Dictionary cache contains 153 entries
+Ambiguity detection complete:
+  - Total entries kept: 122
+  - Ambiguous entries: 15
+  - Dictionary cache now contains 154 entries
+  - Ambiguity rate: 12.3%
+
+--- Sorting nouns by ambiguity, length, and frequency ---
+  Sorted 122 nouns
+  Clear entries: 107, Ambiguous entries: 15
+Saved 122 nouns to doctors_rebirth_ai.json
+
+--- STEP 3: Categorizing nouns with AI ---
+
+--- Starting AI categorization for 122 nouns ---
+  Processing 37 nouns that need categorization
+  Processing batch 1/1 (37 nouns)
+--- AI categorization complete ---
+Saved 122 nouns to doctors_rebirth_ai.json
+
+--- STEP 4: Translating to English with AI ---
+
+--- Starting AI translation for 37 nouns (skipping 85 already translated) ---
+  Processing batch 1/1 (37 nouns)
+--- AI translation complete ---
+Saved 122 nouns to doctors_rebirth_ai.json
+
+--- STEP 5: Guessing missing Hanja with AI ---
+
+--- Starting AI hanja guessing for 28 nouns (skipping 94 already have hanja) ---
+  Processing batch 1/1 (28 nouns)
+--- AI hanja guessing complete ---
+Saved 122 nouns to doctors_rebirth_ai.json
+
+--- STEP 6: Converting to Simplified Chinese ---
+Saved 122 nouns to doctors_rebirth_ai.json
+
+--- STEP 7: Creating Excel file ---
+
+Exporting to Excel files...
+  Total entries: 122
+  Full Glossary entries: 107
+  ambiguous terms entries: 15
+
+Creating master Excel file: doctors_rebirth_ai_master.xlsx
+  - Full Glossary entries: 107 rows
+  - ambiguous terms entries: 15 rows
+  ✓ Master file created successfully
+
+Creating main Excel file: doctors_rebirth_ai.xlsx
+  - character names: 9 entries, total frequency: 339
+  - character titles: 38 entries, total frequency: 256
+  - skills and techniques: 12 entries, total frequency: 42
+  - locations and organizations: 21 entries, total frequency: 198
+  - item names: 15 entries, total frequency: 42
+  - misc: 12 entries, total frequency: 40
+  - Ambiguous terms: 15 entries
+  ✓ Main file created successfully with 6 category worksheet(s)
+
+📊 Final Statistics:
+   Total nouns: 122
+   - character names: 9 entries, total frequency: 339
+   - character titles: 38 entries, total frequency: 256
+   - skills and techniques: 12 entries, total frequency: 42
+   - locations and organizations: 21 entries, total frequency: 198
+   - item names: 15 entries, total frequency: 42
+   - misc: 12 entries, total frequency: 40
+   - Ambiguous terms: 15 entries
+
+============================================================
+NOVEL GLOSSARY MAKER COMPLETED SUCCESSFULLY!
+============================================================
+

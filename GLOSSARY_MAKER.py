@@ -11,6 +11,7 @@ import sys
 import os
 import io
 from datetime import datetime
+import re
 
 # Add the current directory to the path so we can import our modules
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -48,6 +49,10 @@ class NounProcessorGUI:
         
         # Create control buttons frame
         self.create_control_buttons()
+
+        if hasattr(self, 'toggle_dict_api_key'):
+            # Call after a short delay to ensure GUI is fully loaded
+            self.root.after(100, self.toggle_dict_api_key)
         
         # Redirect stdout to log
         self.redirect_stdout()
@@ -72,6 +77,42 @@ class NounProcessorGUI:
     def flush(self):
         """Required for stdout redirection"""
         pass
+
+    def save_log_to_file(self):
+        """Save the contents of the log to a file based on OUTPUT_EXCEL name"""
+        try:
+            # Get the output excel filename from current config
+            output_excel = self.output_var.get()
+            
+            # Remove .xlsx or .xls extension and add _log.txt
+            if output_excel.endswith('.xlsx'):
+                log_filename = output_excel.replace('.xlsx', '_log.txt')
+            elif output_excel.endswith('.xls'):
+                log_filename = output_excel.replace('.xls', '_log.txt')
+            else:
+                # If no extension, just add _log.txt
+                log_filename = output_excel + '_log.txt'
+            
+            # Get all text from log widget
+            self.log_text.configure(state='normal')
+            log_content = self.log_text.get("1.0", tk.END)
+            self.log_text.configure(state='disabled')
+            
+            # Add timestamp to the log
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            separator = "=" * 60
+            
+            with open(log_filename, 'w', encoding='utf-8') as f:
+                f.write(f"Log saved at: {timestamp}\n")
+                f.write(f"Output Excel: {output_excel}\n")
+                f.write(f"Log file: {log_filename}\n")
+                f.write(separator + "\n\n")
+                f.write(log_content)
+            
+            print(f"\nLog saved to: {log_filename}")
+            
+        except Exception as e:
+            print(f"\nError saving log file: {e}")
     
     def load_config(self):
         """Load configuration from config.json"""
@@ -95,6 +136,7 @@ class NounProcessorGUI:
             "API_KEY": "",
             "MODEL_NAME": "gemini-2.5-pro",
             "RAWS_FOLDER": "raws",
+            "NOUNS_JSON_FILE": "nouns.json",
             "REFERENCE_FILE": "",
             "OUTPUT_EXCEL": "nouns_replace.xlsx",
             "CHAPTERS_ANALYZED": 5,
@@ -104,10 +146,17 @@ class NounProcessorGUI:
             "MAX_RETRIES": 10,
             "RETRY_DELAY": 30,
             "HANJA_IDENTIFICATION": True,
+            "LOCAL_MODEL": False,
             "GUESS_HANJA": True,
+            "DO_CATEGORIZATION": True,
+            "DO_TRANSLATION": True,
             "SIMPLIFIED_CHINESE_CONVERSION": True,
             "GENRE": "murim"
         }
+
+    def toggle_dict_api_key(self):
+        """Show or hide the KRDICT API key field based on local model checkbox."""
+        self.dict_api_key_frame.pack(anchor='w', pady=(5, 5), fill='x', padx=20)
     
     def create_main_tab(self):
         """Create main settings tab"""
@@ -154,10 +203,18 @@ class NounProcessorGUI:
         raws_entry.grid(row=row, column=1, sticky='w', pady=5)
         ttk.Button(scrollable_frame, text="Browse", command=self.browse_raws_folder).grid(row=row, column=2, padx=5)
         row += 1
+
+        # Glossary Filename
+        ttk.Label(scrollable_frame, text="Glossary Filename:").grid(row=row, column=0, sticky='w', pady=5)
+        self.nouns_json_file_var = tk.StringVar(value=self.config.get("NOUNS_JSON_FILE", "nouns.json"))
+        nouns_json_file_entry = ttk.Entry(scrollable_frame, textvariable=self.nouns_json_file_var, width=40)
+        nouns_json_file_entry.grid(row=row, column=1, sticky='w', pady=5)
+        ttk.Button(scrollable_frame, text="Browse", command=self.browse_nouns_json_file).grid(row=row, column=2, padx=5)
+        row += 1        
         
         # Reference File
         ttk.Label(scrollable_frame, text="Reference File (optional):").grid(row=row, column=0, sticky='w', pady=5)
-        self.reference_var = tk.StringVar(value=self.config.get("REFERENCE_FILE", ""))
+        self.reference_var = tk.StringVar(value=self.config.get("REFERENCE_FILE", "murim_reference.xlsx"))
         reference_entry = ttk.Entry(scrollable_frame, textvariable=self.reference_var, width=40)
         reference_entry.grid(row=row, column=1, sticky='w', pady=5)
         ttk.Button(scrollable_frame, text="Browse", command=self.browse_reference_file).grid(row=row, column=2, padx=5)
@@ -165,7 +222,7 @@ class NounProcessorGUI:
         
         # Output Excel
         ttk.Label(scrollable_frame, text="Output Excel:").grid(row=row, column=0, sticky='w', pady=5)
-        self.output_var = tk.StringVar(value=self.config.get("OUTPUT_EXCEL", "nouns_replace.xlsx"))
+        self.output_var = tk.StringVar(value=self.config.get("OUTPUT_EXCEL", "glossary.xlsx"))
         output_entry = ttk.Entry(scrollable_frame, textvariable=self.output_var, width=40)
         output_entry.grid(row=row, column=1, sticky='w', pady=5)
         row += 1
@@ -186,10 +243,33 @@ class NounProcessorGUI:
         # HANJA_IDENTIFICATION
         self.hanja_id_var = tk.BooleanVar(value=self.config.get("HANJA_IDENTIFICATION", True))
         ttk.Checkbutton(checkbox_frame, text="Check this if the text has hanja in the format 천마(天魔)", variable=self.hanja_id_var).pack(anchor='w', pady=2)
-        
+
+        # USE LOCAL NOUN IDENTIFICATION
+        self.local_model_var = tk.BooleanVar(value=self.config.get("LOCAL_MODEL", False))
+        self.local_checkbox = ttk.Checkbutton(checkbox_frame, text="Use Local Machine Learning Model (instead of Gemini)", variable=self.local_model_var, command=self.toggle_dict_api_key)
+        self.local_checkbox.pack(anchor='w', pady=2)
+
+        # DICT_API_KEY field (initially hidden)
+        self.dict_api_key_frame = ttk.Frame(checkbox_frame)
+        self.dict_api_key_frame.pack_forget()  # Hide initially
+
+        ttk.Label(self.dict_api_key_frame, text="KRDICT API Key (for dictionary checking):").pack(side='left', padx=5)
+        self.dict_api_key_var = tk.StringVar(value=self.config.get("DICT_API_KEY", ""))
+        self.dict_api_key_entry = ttk.Entry(self.dict_api_key_frame, textvariable=self.dict_api_key_var, 
+                                             width=40, show="*")
+        self.dict_api_key_entry.pack(side='left', padx=5)
+
         # GUESS_HANJA
         self.guess_hanja_var = tk.BooleanVar(value=self.config.get("GUESS_HANJA", True))
         ttk.Checkbutton(checkbox_frame, text="Check if you want AI to guess what the missing hanja is", variable=self.guess_hanja_var).pack(anchor='w', pady=2)
+
+        # Do categorization
+        self.do_categorization_var = tk.BooleanVar(value=self.config.get("DO_CATEGORIZATION", True))
+        ttk.Checkbutton(checkbox_frame, text="Check if you want AI to place the terms in categories for better translation.", variable=self.do_categorization_var).pack(anchor='w', pady=2)
+
+        # Do Translation
+        self.do_translation_var = tk.BooleanVar(value=self.config.get("DO_TRANSLATION", True))
+        ttk.Checkbutton(checkbox_frame, text="Check if you want AI to translate the terms", variable=self.do_translation_var).pack(anchor='w', pady=2)
         
         # SIMPLIFIED_CHINESE_CONVERSION
         self.simplified_var = tk.BooleanVar(value=self.config.get("SIMPLIFIED_CHINESE_CONVERSION", True))
@@ -277,9 +357,13 @@ class NounProcessorGUI:
         self.log_text.pack(fill='both', expand=True)
         self.log_text.configure(state='disabled')
         
-        # Add clear button
-        clear_button = ttk.Button(log_frame, text="Clear Log", command=self.clear_log)
-        clear_button.pack(pady=5)
+        # Add button frame
+        button_frame = ttk.Frame(log_frame)
+        button_frame.pack(pady=5)
+        
+        # Add buttons
+        ttk.Button(button_frame, text="Clear Log", command=self.clear_log).pack(side='left', padx=5)
+        ttk.Button(button_frame, text="Save Log to File", command=self.save_log_to_file).pack(side='left', padx=5)
     
     def create_control_buttons(self):
         """Create control buttons at the bottom"""
@@ -318,6 +402,13 @@ class NounProcessorGUI:
         folder = filedialog.askdirectory(title="Select RAWS Folder")
         if folder:
             self.raws_folder_var.set(folder)
+
+    def browse_nouns_json_file(self):
+        """Browse for reference file"""
+        filetypes = [("JSON files", "*.json"), ("All files", "*.*")]
+        file = filedialog.askopenfilename(title="Select Glossary JSON File", filetypes=filetypes)
+        if file:
+            self.nouns_json_file_var.set(file)
     
     def browse_reference_file(self):
         """Browse for reference file"""
@@ -334,29 +425,45 @@ class NounProcessorGUI:
     
     def get_current_config(self):
         """Get current configuration from GUI widgets"""
+        nouns_json_file = self.nouns_json_file_var.get()
+        reference_file = self.reference_var.get()
+        output_excel = self.output_var.get()
+
+        # Append extensions if missing
+        if nouns_json_file and not nouns_json_file.endswith('.json'):
+            nouns_json_file += '.json'
+        if reference_file and not reference_file.endswith(('.xlsx', '.xls')):
+            reference_file += '.xlsx'
+        if output_excel and not output_excel.endswith(('.xlsx', '.xls')):
+            output_excel += '.xlsx'
+
         config = {
-            "API_KEY": self.api_key_var.get(),
-            "MODEL_NAME": self.model_var.get(),
-            "RAWS_FOLDER": self.raws_folder_var.get(),
-            "REFERENCE_FILE": self.reference_var.get(),
-            "OUTPUT_EXCEL": self.output_var.get(),
-            "CHAPTERS_ANALYZED": self.chapters_analyzed_var.get(),
-            "CATEGORIZATION_BATCH_SIZE": self.categorization_batch_var.get(),
-            "TRANSLATION_BATCH_SIZE": self.translation_batch_var.get(),
-            "HANJA_GUESSING_BATCH_SIZE": self.hanja_batch_var.get(),
-            "MAX_RETRIES": self.max_retries_var.get(),
-            "RETRY_DELAY": self.retry_delay_var.get(),
-            "HANJA_IDENTIFICATION": self.hanja_id_var.get(),
-            "GUESS_HANJA": self.guess_hanja_var.get(),
-            "SIMPLIFIED_CHINESE_CONVERSION": self.simplified_var.get(),
-            "GENRE": self.genre_var.get(),
-            "NOUNS_JSON_FILE": "nouns.json",  # Fixed
-            "ERROR_LOG": "error.txt",  # Fixed
-            "GENRE_DESCRIPTIONS": config_loader.GENRE_DESCRIPTIONS,  # From config_loader
-            "CATEGORIES": config_loader.CATEGORIES  # From config_loader
-        }
+                "API_KEY": self.api_key_var.get(),
+                "MODEL_NAME": self.model_var.get(),
+                "RAWS_FOLDER": self.raws_folder_var.get(),
+                "NOUNS_JSON_FILE": nouns_json_file,
+                "REFERENCE_FILE": reference_file,
+                "OUTPUT_EXCEL": output_excel,
+                "CHAPTERS_ANALYZED": self.chapters_analyzed_var.get(),
+                "CATEGORIZATION_BATCH_SIZE": self.categorization_batch_var.get(),
+                "TRANSLATION_BATCH_SIZE": self.translation_batch_var.get(),
+                "HANJA_GUESSING_BATCH_SIZE": self.hanja_batch_var.get(),
+                "MAX_RETRIES": self.max_retries_var.get(),
+                "RETRY_DELAY": self.retry_delay_var.get(),
+                "HANJA_IDENTIFICATION": self.hanja_id_var.get(),
+                "LOCAL_MODEL": self.local_model_var.get(),
+                "DICT_API_KEY": self.dict_api_key_var.get(),
+                "GUESS_HANJA": self.guess_hanja_var.get(),
+                "DO_CATEGORIZATION": self.do_categorization_var.get(),
+                "DO_TRANSLATION": self.do_translation_var.get(),
+                "SIMPLIFIED_CHINESE_CONVERSION": self.simplified_var.get(),
+                "GENRE": self.genre_var.get(),
+                "ERROR_LOG": "error.txt",
+                "GENRE_DESCRIPTIONS": config_loader.GENRE_DESCRIPTIONS,  # From config_loader
+                "CATEGORIES": config_loader.CATEGORIES  # From config_loader
+            }
         return config
-    
+
     def save_as_default(self):
         """Save current configuration as default config.json"""
         config = self.get_current_config()
@@ -382,8 +489,9 @@ class NounProcessorGUI:
                 self.api_key_var.set(config.get("API_KEY", ""))
                 self.model_var.set(config.get("MODEL_NAME", "gemini-2.5-pro"))
                 self.raws_folder_var.set(config.get("RAWS_FOLDER", "raws"))
+                self.nouns_json_file_var.set(config.get("NOUNS_JSON_FILE", "nouns.json"))
                 self.reference_var.set(config.get("REFERENCE_FILE", ""))
-                self.output_var.set(config.get("OUTPUT_EXCEL", "nouns_replace.xlsx"))
+                self.output_var.set(config.get("OUTPUT_EXCEL", "glossary.xlsx"))
                 self.chapters_analyzed_var.set(config.get("CHAPTERS_ANALYZED", 5))
                 self.categorization_batch_var.set(config.get("CATEGORIZATION_BATCH_SIZE", 20))
                 self.translation_batch_var.set(config.get("TRANSLATION_BATCH_SIZE", 15))
@@ -391,12 +499,19 @@ class NounProcessorGUI:
                 self.max_retries_var.set(config.get("MAX_RETRIES", 10))
                 self.retry_delay_var.set(config.get("RETRY_DELAY", 30))
                 self.hanja_id_var.set(config.get("HANJA_IDENTIFICATION", True))
+                self.local_model_var.set(config.get("LOCAL_MODEL", False))  # Add this
+                self.dict_api_key_var.set(config.get("DICT_API_KEY", ""))  # Add this
                 self.guess_hanja_var.set(config.get("GUESS_HANJA", True))
                 self.simplified_var.set(config.get("SIMPLIFIED_CHINESE_CONVERSION", True))
                 self.genre_var.set(config.get("GENRE", "murim"))
                 
+                # Update visibility of DICT_API_KEY field
+                if hasattr(self, 'toggle_dict_api_key'):
+                    self.toggle_dict_api_key()
+                
                 print(f"Configuration loaded from {file}")
                 messagebox.showinfo("Success", f"Configuration loaded from {file}")
+                
             except Exception as e:
                 print(f"Error loading configuration: {e}")
                 messagebox.showerror("Error", f"Failed to load configuration: {e}")
@@ -451,11 +566,11 @@ class NounProcessorGUI:
             
             if success:
                 print("\n" + "=" * 60)
-                print("PIPELINE COMPLETED SUCCESSFULLY!")
+                print("NOVEL GLOSSARY MAKER COMPLETED SUCCESSFULLY!")
                 print("=" * 60)
             else:
                 print("\n" + "=" * 60)
-                print("PIPELINE FAILED!")
+                print("NOVEL GLOSSARY MAKER HAS FAILED.")
                 print("=" * 60)
                 
         except Exception as e:
@@ -464,6 +579,8 @@ class NounProcessorGUI:
             traceback.print_exc()
             
         finally:
+            # Save log to file
+            self.save_log_to_file()
             # Re-enable run button
             self.root.after(0, self.enable_run_button)
     
