@@ -30,7 +30,23 @@ This tool helps you create a translation glossary spreadsheet for Korean novels,
 
 4. Configure your custom settings and then hit RUN NOVEL GLOSSARY MAKER to run the code and create your novel translation glossary. Refer to READ ME.pdf to see what each setting does.
 
-	
+
+
+
+# Instructions for Google Colab
+
+You can run this tool is in your browser with Google Colab. No installation is needed but there is no GUI.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/foodiemonster007/Korean-Novel-Glossary-Maker/blob/main/korean_glossary_maker_colab.ipynb)
+
+**One-Click Setup:**
+
+1. Click the **"Open in Colab"** button above.
+2. Get a free **Gemini API key** following the instructions above.
+3. Upload your Korean novel `.txt` files when prompted (one file per chapter).
+4. Get your finished `glossary.xlsx` file!
+
+
 
 # Frequently Asked Questions
 
