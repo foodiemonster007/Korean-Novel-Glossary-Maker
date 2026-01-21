@@ -33,6 +33,9 @@ def run_noun_extraction_pipeline():
     # STEP 1: Load existing nouns.json (if exists) and optionally merge with reference nouns
     print("\n--- STEP 1: Loading and merging nouns ---")
     
+    # Store a copy of the original glossary for SAVE_NEW_ONLY comparison
+    original_glossary = []
+    
     # Try to load existing nouns.json
     master_nouns = []
     existing_hanguls = set()
@@ -42,6 +45,12 @@ def run_noun_extraction_pipeline():
         master_nouns = file_operations.load_nouns_json()
         existing_hanguls = {noun['hangul'] for noun in master_nouns}
         print(f"  Loaded {len(master_nouns)} existing nouns.")
+        
+        # Store a copy of the original glossary if SAVE_NEW_ONLY is enabled
+        if config_loader.SAVE_NEW_ONLY:
+            original_glossary = master_nouns.copy()
+            print(f"  Stored copy of original glossary ({len(original_glossary)} terms) for reference.")
+            
     except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
         # If file doesn't exist or is empty/corrupt, start fresh
         print(f"  No existing json found or error loading: {e}")
@@ -194,6 +203,12 @@ def run_noun_extraction_pipeline():
     
     # STEP 7: Convert to Excel
     print("\n--- STEP 7: Creating Excel file ---")
+    
+    # Check if we need to filter out original glossary terms
+    if config_loader.SAVE_NEW_ONLY and original_glossary:
+        print("  Filtering out terms from original glossary.")
+        master_nouns = excel_export.filter_out_original_terms(master_nouns, original_glossary)
+        print(f"  After filtering: {len(master_nouns)} new terms remaining")
     
     # Prepare data for Excel
     excel_data = []

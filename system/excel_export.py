@@ -10,6 +10,31 @@ from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
 from system import config_loader
 
+def filter_out_original_terms(current_nouns, original_nouns):
+    """
+    Filter out terms that were already in the original glossary.
+    
+    Args:
+        current_nouns (list): Current list of nouns after processing
+        original_nouns (list): Original list of nouns before processing
+        
+    Returns:
+        list: Filtered list containing only new terms
+    """
+    if not original_nouns:
+        return current_nouns
+    
+    # Create a set of hangul from original glossary for quick lookup
+    original_hanguls = {noun['hangul'] for noun in original_nouns}
+    
+    # Filter out terms that exist in the original glossary
+    filtered_nouns = []
+    for noun in current_nouns:
+        if noun['hangul'] not in original_hanguls:
+            filtered_nouns.append(noun)
+    
+    return filtered_nouns
+
 def export_to_excel(excel_data, categories):
     """
     Export data to Excel files as specified:

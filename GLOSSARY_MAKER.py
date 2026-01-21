@@ -146,6 +146,7 @@ class NounProcessorGUI:
             "MAX_RETRIES": 10,
             "RETRY_DELAY": 30,
             "HANJA_IDENTIFICATION": True,
+            "SAVE_NEW_ONLY": False, 
             "LOCAL_MODEL": False,
             "GUESS_HANJA": True,
             "DO_CATEGORIZATION": True,
@@ -243,6 +244,10 @@ class NounProcessorGUI:
         # HANJA_IDENTIFICATION
         self.hanja_id_var = tk.BooleanVar(value=self.config.get("HANJA_IDENTIFICATION", True))
         ttk.Checkbutton(checkbox_frame, text="Check this if the text has hanja in the format 천마(天魔)", variable=self.hanja_id_var).pack(anchor='w', pady=2)
+
+        # SAVE_NEW_ONLY
+        self.save_new_only_var = tk.BooleanVar(value=self.config.get("SAVE_NEW_ONLY", False))
+        ttk.Checkbutton(checkbox_frame, text="Check this if you only want to export new glossary terms", variable=self.save_new_only_var).pack(anchor='w', pady=2)
 
         # USE LOCAL NOUN IDENTIFICATION
         self.local_model_var = tk.BooleanVar(value=self.config.get("LOCAL_MODEL", False))
@@ -451,6 +456,7 @@ class NounProcessorGUI:
                 "MAX_RETRIES": self.max_retries_var.get(),
                 "RETRY_DELAY": self.retry_delay_var.get(),
                 "HANJA_IDENTIFICATION": self.hanja_id_var.get(),
+                "SAVE_NEW_ONLY": self.save_new_only_var.get(), 
                 "LOCAL_MODEL": self.local_model_var.get(),
                 "DICT_API_KEY": self.dict_api_key_var.get(),
                 "GUESS_HANJA": self.guess_hanja_var.get(),

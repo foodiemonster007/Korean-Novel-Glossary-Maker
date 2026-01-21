@@ -137,6 +137,12 @@ def modify_config_interactive(config):
     config["HANJA_IDENTIFICATION"] = ask_yes_no("Identify hanja in text?", 
                                                 "y" if config.get("HANJA_IDENTIFICATION", True) else "n")
     
+    # Add SAVE_NEW_ONLY option
+    config["SAVE_NEW_ONLY"] = ask_yes_no("Export only new glossary terms?", 
+                                         "y" if config.get("SAVE_NEW_ONLY", False) else "n")
+    if config["SAVE_NEW_ONLY"]:
+        print("  ⓘ Only terms not in the original glossary will be exported to Excel.")
+    
     config["LOCAL_MODEL"] = ask_yes_no("Use local ML model (instead of Gemini)?", 
                                        "y" if config.get("LOCAL_MODEL", False) else "n")
     
@@ -220,6 +226,7 @@ def run_pipeline_with_config(config_path="config.json"):
     if config.get("DO_TRANSLATION", True): options.append("Translation")
     if config.get("DO_CATEGORIZATION", False): options.append("Categorization")
     if config.get("HANJA_IDENTIFICATION", True): options.append("Hanja ID")
+    if config.get("SAVE_NEW_ONLY", False): options.append("Save New Only")
     print(f"  • Enabled: {', '.join(options) if options else 'None'}")
     
     # Ask if user wants to modify
@@ -328,6 +335,7 @@ def create_sample_config():
         "MAX_RETRIES": 3,
         "RETRY_DELAY": 31,
         "HANJA_IDENTIFICATION": True,
+        "SAVE_NEW_ONLY": False,  # Add this line
         "LOCAL_MODEL": False,
         "GUESS_HANJA": False,
         "DO_CATEGORIZATION": False,
@@ -397,6 +405,11 @@ def interactive_setup():
     print("Processing Options (y/n):")
     
     config["HANJA_IDENTIFICATION"] = input("Identify hanja in text? (e.g., 천마(天魔)) [y]: ").strip().lower() != 'n'
+    
+    # Add SAVE_NEW_ONLY option
+    config["SAVE_NEW_ONLY"] = input("Export only new glossary terms? [n]: ").strip().lower() != 'n'
+    if config["SAVE_NEW_ONLY"]:
+        print("  ⓘ Only terms not in the original glossary will be exported to Excel.")
     
     config["LOCAL_MODEL"] = input("Use local ML model instead of Gemini? [n]: ").strip().lower() == 'y'
     

@@ -12,6 +12,7 @@
   "MAX_RETRIES": 3,
   "RETRY_DELAY": 30,
   "HANJA_IDENTIFICATION": true,
+  "SAVE_NEW_ONLY": false, 
   "LOCAL_MODEL": false,
   "DICT_API_KEY": "",
   "GUESS_HANJA": false,
