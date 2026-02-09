@@ -31,32 +31,25 @@ def run_noun_extraction_pipeline():
         notification.send_notification("API Key Missing", "Please set your Google AI API key.")
         return False
 
-    # STEP 0: Store original glossary if SAVE_NEW_ONLY is enabled
-    print("\n--- STEP 0: Loading existing glossary ---")
-    original_glossary = []
-    
-    # Load existing nouns.json if it exists
-    try:
-        original_glossary = file_operations.load_nouns_json()
-        print(f"  Loaded {len(original_glossary)} existing nouns from glossary.")
-    except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
-        print(f"  No existing glossary found or error loading: {e}")
-        original_glossary = []
-    
-    # STEP 1: Load/merge with reference nouns
+    # STEP 1: Load existing nouns.json (if exists) and optionally merge with reference nouns
     print("\n--- STEP 1: Loading and merging nouns ---")
     
-    # Start fresh for this run
+    # Store a copy of the original glossary for SAVE_NEW_ONLY comparison
+    original_glossary = []
+    
+    # Try to load existing nouns.json
     master_nouns = []
     existing_hanguls = set()
     
-    # Try to load existing nouns.json (again, to start fresh)
     try:
+        # Load existing nouns.json if it exists
         master_nouns = file_operations.load_nouns_json()
         existing_hanguls = {noun['hangul'] for noun in master_nouns}
-        print(f"  Starting with {len(master_nouns)} existing nouns.")
+        print(f"  Loaded {len(master_nouns)} existing nouns.")
+            
     except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
-        print(f"  Starting fresh: {e}")
+        # If file doesn't exist or is empty/corrupt, start fresh
+        print(f"  No existing json found or error loading: {e}")
         master_nouns = []
         existing_hanguls = set()
     
@@ -87,8 +80,13 @@ def run_noun_extraction_pipeline():
         print(f"  Added {new_noun_count} new nouns from reference file")
     else:
         print("  No reference nouns found or reference file is empty")
-    
-    # Save merged nouns
+
+    # Store a copy of the original glossary if SAVE_NEW_ONLY is enabled
+    if config_loader.SAVE_NEW_ONLY:
+        original_glossary = master_nouns.copy()
+        print(f"  Stored copy of original glossary + reference nouns ({len(original_glossary)} terms) for later reference.")
+
+    # Save merged nouns (even if no reference nouns were added)
     file_operations.save_nouns_json(master_nouns)
     
     # Get text files
@@ -101,20 +99,22 @@ def run_noun_extraction_pipeline():
     # Create the Gemini AI client ONCE
     client = genai.Client(api_key=config_loader.API_KEY)
 
-    # STEP 2: Regex extraction on entire text corpus (only if HANJA_IDENTIFICATION is enabled)
+    # STEP 1: Regex extraction on entire text corpus (only if HANJA_IDENTIFICATION is enabled)
     if config_loader.HANJA_IDENTIFICATION:
-        print("\n--- STEP 2: Regex extraction on entire novel text ---")
+        print(" - Option: Regex extraction on entire novel text")
         master_nouns, existing_hanguls = text_processing.extract_nouns_with_regex_all_files(text_files)
         
         if master_nouns is False:  # Error occurred
             return False
         
     else:
-        print("\n--- Skipping regex extraction: No hanja in brackets in the novel text ---")
+        print("--- Skipping Step 1: There are no hanja in brackets in the novel text. ---")
+        master_nouns = []
+        existing_hanguls = set()
 
-    # STEP 3: Noun extraction based on chosen method
+    # STEP 2a: Noun extraction based on chosen method
     if config_loader.LOCAL_MODEL:
-        print("\n--- STEP 3: Using Local NER Model for entity extraction ---")
+        print("\n--- STEP 2: Using Local NER Model for entity extraction ---")
         
         # Run local NER model
         print("Running local NER model...")
@@ -129,11 +129,11 @@ def run_noun_extraction_pipeline():
             return False
     else:
         # Original Gemini extraction
-        print("\n--- STEP 3: AI extraction by chunks (Gemini) ---")
+        print("\n--- STEP 2: AI extraction by chunks (Gemini) ---")
         success, master_nouns, existing_hanguls = extraction.extract_nouns_with_ai_by_chunks(client, text_files, master_nouns, existing_hanguls)
 
-        # STEP 3b: Calculate frequencies and filter out zero-frequency nouns
-        print("\n--- STEP 3b: Calculating frequencies and filtering ---")
+        # STEP 2c: Calculate frequencies and filter out zero-frequency nouns
+        print("\n--- STEP 2b: Calculating frequencies and filtering ---")
         # Get combined text for frequency calculation
         all_text_content = []
         for text_file in text_files:
@@ -146,11 +146,11 @@ def run_noun_extraction_pipeline():
         # Filter out nouns with frequency 0
         master_nouns = frequency_calculation.filter_zero_frequency(master_nouns)
 
-        # STEP 3c: Run ambiguity detection
-        print("\n--- STEP 3c: Running ambiguity detection ---")
+        # STEP 2d: Run ambiguity detection
+        print("\n--- STEP 2c: Running ambiguity detection ---")
         
         # Get config for ambiguity detector
-        config_for_ambiguity = {"api_keys": {"krdict_api_key": config_loader.DICT_API_KEY or "YOUR_KRDICT_API_KEY_HERE"}}
+        config_for_ambiguity = {"api_keys": {"krdict_api_key": config_loader.DICT_API_KEY or "YOUR_KRDICT_API_KEY_HERE"}        }
         
         # Run ambiguity detection
         master_nouns = detect_ambiguity_for_nouns(master_nouns, config_for_ambiguity)
@@ -163,10 +163,10 @@ def run_noun_extraction_pipeline():
             print("No nouns found in the text files.")
             notification.send_notification("No Nouns Found", 
                                          "No proper nouns were found in the text files.")
-            return False
+            return False    
     
-    # STEP 4: Categorize nouns
-    print("\n--- STEP 4: Categorizing nouns with AI ---")
+    # STEP 3: Categorize nouns
+    print("\n--- STEP 3: Categorizing nouns with AI ---")
     if config_loader.DO_CATEGORIZATION:
         master_nouns = categorization.categorize_nouns_with_ai(client, master_nouns)
     else:
@@ -174,24 +174,24 @@ def run_noun_extraction_pipeline():
         master_nouns = categorization.fill_blank_category_as_misc(master_nouns)
     file_operations.save_nouns_json(master_nouns)
     
-    # STEP 5: Fill English translations
-    print("\n--- STEP 5: Translating to English with AI ---")
+    # STEP 4: Fill English translations
+    print("\n--- STEP 4: Translating to English with AI ---")
     if config_loader.DO_TRANSLATION:
         master_nouns = translation.translate_nouns_with_ai(client, master_nouns)
     else:
         print("You chose not to translate to English with AI.")
     file_operations.save_nouns_json(master_nouns)
     
-    # STEP 6: Guess missing hanja if GUESS_HANJA is True
-    print("\n--- STEP 6: Guessing missing Hanja with AI ---")
+    # STEP 5: Guess missing hanja if GUESS_HANJA is True
+    print("\n--- STEP 5: Guessing missing Hanja with AI ---")
     if config_loader.GUESS_HANJA:
         master_nouns = hanja_guessing.guess_missing_hanja_with_ai(client, master_nouns)
         file_operations.save_nouns_json(master_nouns)
     else:
         print("You chose not to guess missing Hanja with AI.")
     
-    # STEP 7: Convert to simplified Chinese if SIMPLIFIED_CHINESE_CONVERSION is True
-    print("\n--- STEP 7: Converting to Simplified Chinese ---")
+    # STEP 6: Convert to simplified Chinese if SIMPLIFIED_CHINESE_CONVERSION is True
+    print("\n--- STEP 6: Converting to Simplified Chinese ---")
     if config_loader.SIMPLIFIED_CHINESE_CONVERSION:
         for noun in master_nouns:
             if noun['hanja']:
@@ -202,28 +202,13 @@ def run_noun_extraction_pipeline():
     else:
         print("You chose not to convert to Simplified Chinese.")
     
-    # STEP 8: Convert to Excel
-    print("\n--- STEP 8: Creating Excel file ---")
-    
-    # IMPORTANT: Store a copy of the FINAL glossary before filtering for SAVE_NEW_ONLY
-    final_glossary_before_filter = master_nouns.copy()
+    # STEP 7: Convert to Excel
+    print("\n--- STEP 7: Creating Excel file ---")
     
     # Check if we need to filter out original glossary terms
     if config_loader.SAVE_NEW_ONLY and original_glossary:
-        print("  SAVE_NEW_ONLY is enabled. Filtering out terms from original glossary.")
-        print(f"  Original glossary has {len(original_glossary)} terms.")
-        print(f"  Current glossary has {len(master_nouns)} terms.")
-        
-        # Create sets for comparison
-        original_hanguls = {noun['hangul'] for noun in original_glossary}
-        
-        # Filter master_nouns to only include new terms
-        filtered_nouns = []
-        for noun in master_nouns:
-            if noun['hangul'] not in original_hanguls:
-                filtered_nouns.append(noun)
-        
-        master_nouns = filtered_nouns
+        print("  Filtering out terms from original glossary.")
+        master_nouns = excel_export.filter_out_original_terms(master_nouns, original_glossary)
         print(f"  After filtering: {len(master_nouns)} new terms remaining")
     
     # Prepare data for Excel
