@@ -28,16 +28,6 @@ def extract_hanja_nouns_with_regex(text):
     return list(found_nouns.values())
 
 def remove_duplicates_preserving_data(existing_nouns, new_nouns):
-    """
-    Remove duplicates, preserving data from existing nouns.
-    
-    Args:
-        existing_nouns: List of existing noun dictionaries
-        new_nouns: List of new noun dictionaries
-        
-    Returns:
-        List of unique nouns with preserved data
-    """
     unique_nouns = []
     seen_hanguls = set()
     
@@ -57,17 +47,20 @@ def remove_duplicates_preserving_data(existing_nouns, new_nouns):
     
     return unique_nouns
 
-def extract_nouns_with_regex_all_files(text_files):
-    """Extract hanja nouns from entire text corpus using regex and remove duplicates"""
+def extract_nouns_with_regex_all_files(text_files, existing_nouns=None):
     if not text_files:
         notification.send_notification("Script Failed", 
                                      f"Could not find any text files in '{config_loader.RAWS_FOLDER}'.")
         return False
 
-    # Load existing nouns first to preserve their data
-    existing_nouns = file_operations.load_nouns_json()
-    if not existing_nouns:
-        existing_nouns = []
+    # Use provided existing nouns or load from file
+    if existing_nouns is None:
+        existing_nouns = file_operations.load_nouns_json()
+        if not existing_nouns:
+            existing_nouns = []
+    else:
+        # Make a copy to avoid modifying the original list unintentionally
+        existing_nouns = existing_nouns.copy()
     
     # Combine all files content for regex extraction
     entire_text = file_operations.combine_files_content(text_files)

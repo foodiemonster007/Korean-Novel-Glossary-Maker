@@ -55,29 +55,14 @@ def run_noun_extraction_pipeline():
     
     # Load reference nouns (optional)
     reference_nouns = file_operations.load_reference_nouns()
-    
-    if reference_nouns and len(reference_nouns) > 0:        
-        # Add reference nouns that aren't already in master_nouns
-        new_noun_count = 0
-        for noun in reference_nouns:
-            hangul = noun['hangul']
-            
-            if hangul not in existing_hanguls:
-                # Ensure all required fields exist
-                if 'frequency' not in noun:
-                    noun['frequency'] = 0
-                if 'hanja' not in noun:
-                    noun['hanja'] = ''
-                if 'english' not in noun:
-                    noun['english'] = ''
-                if 'category' not in noun:
-                    noun['category'] = ''
-                
-                master_nouns.append(noun)
-                existing_hanguls.add(hangul)
-                new_noun_count += 1
-        
-        print(f"  Added {new_noun_count} new nouns from reference file")
+
+    if reference_nouns:
+        print(f"  Loaded {len(reference_nouns)} reference nouns.")
+        # Merge reference nouns with master_nouns, preserving existing data
+        master_nouns = text_processing.remove_duplicates_preserving_data(master_nouns, reference_nouns)
+        # Update the set of existing hanguls for later steps
+        existing_hanguls = {noun['hangul'] for noun in master_nouns}
+        print(f"  After merging reference, total nouns: {len(master_nouns)}")
     else:
         print("  No reference nouns found or reference file is empty")
 
@@ -101,16 +86,12 @@ def run_noun_extraction_pipeline():
 
     # STEP 1: Regex extraction on entire text corpus (only if HANJA_IDENTIFICATION is enabled)
     if config_loader.HANJA_IDENTIFICATION:
-        print(" - Option: Regex extraction on entire novel text")
-        master_nouns, existing_hanguls = text_processing.extract_nouns_with_regex_all_files(text_files)
-        
+        print("Regex extraction on entire novel text")
+        master_nouns, existing_hanguls = text_processing.extract_nouns_with_regex_all_files(text_files, existing_nouns=master_nouns)
         if master_nouns is False:  # Error occurred
             return False
-        
     else:
         print("--- Skipping Step 1: There are no hanja in brackets in the novel text. ---")
-        master_nouns = []
-        existing_hanguls = set()
 
     # STEP 2a: Noun extraction based on chosen method
     if config_loader.LOCAL_MODEL:
