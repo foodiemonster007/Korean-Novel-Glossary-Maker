@@ -19,7 +19,8 @@ else:
     config = {}
 
 # Extract configuration values
-API_KEY = config.get("API_KEY", "")
+GOOGLE_CLOUD_PROJECT = config.get("GOOGLE_CLOUD_PROJECT", "")
+GOOGLE_CLOUD_LOCATION = config.get("GOOGLE_CLOUD_LOCATION", "us-central1")
 MODEL_NAME = config.get("MODEL_NAME", "gemini-2.5-pro")
 RAWS_FOLDER = config.get("RAWS_FOLDER", "raws")
 NOUNS_JSON_FILE = config.get("NOUNS_JSON_FILE", "nouns.json")

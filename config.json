@@ -1,5 +1,6 @@
 {
-  "API_KEY": "",
+  "GOOGLE_CLOUD_PROJECT": "",
+  "GOOGLE_CLOUD_LOCATION": "us-central1",
   "MODEL_NAME": "gemini-2.5-flash",
   "RAWS_FOLDER": "raws",
   "NOUNS_JSON_FILE": "raws.json",

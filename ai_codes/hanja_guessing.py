@@ -6,7 +6,6 @@ Guesses missing Hanja characters using AI
 """
 import json
 import time
-from google import genai
 from google.genai import types
 from system import config_loader
 

@@ -142,8 +142,8 @@ def _call_ai_api_with_retries(client, text_chunk, chunk_index):
         
         except Exception as e:
             print(f"  Error on attempt {attempt + 1}: {e}")
-            if "API key not valid" in str(e):
-                file_operations.log_error(chunk_index, "Invalid API Key")
+            if "credentials" in str(e).lower() or "permission" in str(e).lower():
+                file_operations.log_error(chunk_index, "Authentication error - check gcloud credentials")
                 return None
 
         if attempt < config_loader.MAX_RETRIES - 1:

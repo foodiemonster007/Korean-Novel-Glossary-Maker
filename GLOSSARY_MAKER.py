@@ -133,7 +133,8 @@ class NounProcessorGUI:
     def get_default_config(self):
         """Return default configuration"""
         return {
-            "API_KEY": "",
+            "GOOGLE_CLOUD_PROJECT": "",
+            "GOOGLE_CLOUD_LOCATION": "us-central1",
             "MODEL_NAME": "gemini-2.5-pro",
             "RAWS_FOLDER": "raws",
             "NOUNS_JSON_FILE": "nouns.json",
@@ -184,10 +185,14 @@ class NounProcessorGUI:
         
         # API Key
         row = 0
-        ttk.Label(scrollable_frame, text="API Key:").grid(row=row, column=0, sticky='w', pady=5)
-        self.api_key_var = tk.StringVar(value=self.config.get("API_KEY", ""))
-        api_key_entry = ttk.Entry(scrollable_frame, textvariable=self.api_key_var, width=50, show="*")
-        api_key_entry.grid(row=row, column=1, sticky='w', pady=5)
+        ttk.Label(scrollable_frame, text="Google Cloud Project:").grid(row=row, column=0, sticky='w', pady=5)
+        self.project_var = tk.StringVar(value=self.config.get("GOOGLE_CLOUD_PROJECT", ""))
+        ttk.Entry(scrollable_frame, textvariable=self.project_var, width=50).grid(row=row, column=1, sticky='w', pady=5)
+        row += 1
+
+        ttk.Label(scrollable_frame, text="GCP Location:").grid(row=row, column=0, sticky='w', pady=5)
+        self.location_var = tk.StringVar(value=self.config.get("GOOGLE_CLOUD_LOCATION", "us-central1"))
+        ttk.Entry(scrollable_frame, textvariable=self.location_var, width=50).grid(row=row, column=1, sticky='w', pady=5)
         row += 1
         
         # Model Name
@@ -443,7 +448,8 @@ class NounProcessorGUI:
             output_excel += '.xlsx'
 
         config = {
-                "API_KEY": self.api_key_var.get(),
+                "GOOGLE_CLOUD_PROJECT": self.project_var.get(),
+                "GOOGLE_CLOUD_LOCATION": self.location_var.get(),
                 "MODEL_NAME": self.model_var.get(),
                 "RAWS_FOLDER": self.raws_folder_var.get(),
                 "NOUNS_JSON_FILE": nouns_json_file,
@@ -492,7 +498,8 @@ class NounProcessorGUI:
                     config = json.load(f)
                 
                 # Update GUI widgets with loaded config
-                self.api_key_var.set(config.get("API_KEY", ""))
+                self.project_var.set(config.get("GOOGLE_CLOUD_PROJECT", ""))
+                self.location_var.set(config.get("GOOGLE_CLOUD_LOCATION", "us-central1"))
                 self.model_var.set(config.get("MODEL_NAME", "gemini-2.5-pro"))
                 self.raws_folder_var.set(config.get("RAWS_FOLDER", "raws"))
                 self.nouns_json_file_var.set(config.get("NOUNS_JSON_FILE", "nouns.json"))

@@ -7,6 +7,7 @@ import sys
 import os
 import json
 from google import genai
+from google.genai.types import HttpOptions
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -26,9 +27,9 @@ def run_noun_extraction_pipeline():
     print(f"Genre: {config_loader.GENRE} ({config_loader.GENRE_DESCRIPTION})")
     print("=" * 60)
     
-    if config_loader.API_KEY == "" or config_loader.API_KEY == "YOUR_API_KEY_HERE":
-        print("🚨 Error: Please set your Google AI API key in the configuration.")
-        notification.send_notification("API Key Missing", "Please set your Google AI API key.")
+    if config_loader.GOOGLE_CLOUD_PROJECT == "":
+        print("🚨 Error: Please set your Google Cloud Project ID in the configuration.")
+        notification.send_notification("Project ID Missing", "Please set your Google Cloud Project ID.")
         return False
 
     # STEP 1: Load existing nouns.json (if exists) and optionally merge with reference nouns
@@ -82,7 +83,12 @@ def run_noun_extraction_pipeline():
         return False
 
     # Create the Gemini AI client ONCE
-    client = genai.Client(api_key=config_loader.API_KEY)
+    client = genai.Client(
+        vertexai=True,
+        project=config_loader.GOOGLE_CLOUD_PROJECT,
+        location=config_loader.GOOGLE_CLOUD_LOCATION,
+        http_options=HttpOptions(api_version="v1"),
+    )
 
     # STEP 1: Regex extraction on entire text corpus (only if HANJA_IDENTIFICATION is enabled)
     if config_loader.HANJA_IDENTIFICATION:

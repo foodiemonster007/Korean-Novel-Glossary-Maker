@@ -12,7 +12,9 @@ This tool helps you create a translation glossary spreadsheet for Korean novels,
 
 2. **Python**: This is a programming language that makes the tool work. You'll need to install it from the official website (https://www.python.org/downloads/). Make sure to check the 2 boxes that say "Add Python to PATH" and "pip" during installation. This step lets your computer easily find and run the program.
 
-3. **Google API Key**: This is a special password that connects the program to Google's text-reading service. You can get a free one from the Google Cloud Console (https://console.cloud.google.com/). Here are the instructions on how to do it: https://www.youtube.com/watch?v=brCkpzAD0gc
+3. **Google Cloud Project**: Create a google cloud project at https://cloud.google.com. Enable Vertex API at https://console.cloud.google.com/apis/library/aiplatform.googleapis.com. Download and install gcloud from https://cloud.google.com/sdk/docs/install. Open a new command prompt terminal and run: 
+
+	> gcloud auth application-default login
 
 4. **Run "setup.py"** by double-clicking it before you proceed to ensure everything is properly set up. You only ever need to run it ONCE. You should see the message "SETUP SUCCESSFUL!" in the command prompt window that pops up.
 
