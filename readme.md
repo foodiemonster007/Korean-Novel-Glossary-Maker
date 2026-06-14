@@ -44,7 +44,17 @@ You can run this tool is in your browser with Google Colab. No installation is n
 **One-Click Setup:**
 
 1. Click the **"Open in Colab"** button above.
-2. Get a free **Gemini API key** following the instructions above.
+2. Look at the left sidebar in Colab and click the **🔑 key icon** (it says "Secrets" on hover)
+
+	Click **"+ Add new secret"**
+
+	In the **Name** field, type exactly: `GOOGLE_CLOUD_PROJECT`
+
+	In the **Value** field, paste your project ID (e.g. `foodie-is-hungry-12345-p0`)
+
+	Toggle the **"Notebook access"** switch to ON
+
+	Click **Save**
 3. Upload your Korean novel `.txt` files when prompted (one file per chapter).
 4. Get your finished `glossary.xlsx` file!
 
