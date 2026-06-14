@@ -48,7 +48,7 @@ You can run this tool is in your browser with Google Colab. No installation is n
 2. Click the project dropdown at the top of the page and click **"New Project"**.
 3. Give it any name you like and click **"Create"**.
 4. Once created, select your new project. Your **Project ID** is shown under the project name (it looks like `my-project-name-123456`). Copy it.
-5. In the left sidebar, go to **APIs & Services → Library**, search for **"Gemini Enterprise Agent Platform API"** and click **Enable**.
+5. In the left sidebar, go to **APIs & Services → Library**, search for **"Agent Platform API"** and click **Enable**.
 
 ### Step 2: Add your Project ID to Colab
 1. Click the "Open in Colab" button above.
